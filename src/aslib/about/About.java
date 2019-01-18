@@ -6,8 +6,8 @@ package aslib.about;
  * @author Adriano Siqueira
  */
 public class About {
-    public static final String VERSION = "5.0";
-    public static final String DATE = "13/dec/2018";
+    public static final String VERSION = "5.1";
+    public static final String DATE = "18/jan/2019";
 
     /**
      * <p> Show info about the aslib. </p>
