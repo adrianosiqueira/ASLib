@@ -1,1 +1,1 @@
-packageSearchIndex = [{"l":"library.about"},{"l":"library.ai"},{"l":"library.cli"},{"l":"library.exceptions"},{"l":"library.filemanager"},{"l":"library.fx.control"},{"l":"library.util"}]
+packageSearchIndex = [{"l":"aslib.about"},{"l":"aslib.ai"},{"l":"aslib.cli"},{"l":"aslib.exceptions"},{"l":"aslib.filemanager"},{"l":"aslib.fx.control"},{"l":"aslib.util"}]

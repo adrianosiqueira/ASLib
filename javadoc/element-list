@@ -1,7 +1,7 @@
-library.about
-library.ai
-library.cli
-library.exceptions
-library.filemanager
-library.fx.control
-library.util
+aslib.about
+aslib.ai
+aslib.cli
+aslib.exceptions
+aslib.filemanager
+aslib.fx.control
+aslib.util
