@@ -5,6 +5,8 @@ package aslib.util;
  * <p> Some accented characters may be encoded but will not be decoded back to string, so some letters may lose their accent. </p>
  *
  * @author Adriano Siqueira
+ * @version 1.1
+ * @since 2.0
  */
 public class MorseCodifier {
 
