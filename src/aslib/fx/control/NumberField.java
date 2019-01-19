@@ -20,6 +20,8 @@ import aslib.exceptions.InvalidClassException;
  *
  * @param <T> Type of data that {@link NumberField} will work with.
  * @author Adriano Siqueira
+ * @version 1.0
+ * @since 4.2
  */
 public class NumberField<T> extends TextField {
     private final Class<T> tClass;
