@@ -6,6 +6,8 @@ import java.io.IOException;
  * <p> Contains the function to clear the screen when running in the console. </p>
  *
  * @author Adriano Siqueira
+ * @version 1.1
+ * @since 1.0
  */
 public class ClearScreen {
 
