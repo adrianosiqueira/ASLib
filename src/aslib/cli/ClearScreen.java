@@ -6,7 +6,7 @@ import java.io.IOException;
  * <p> Contains the function to clear the screen when running in the console. </p>
  *
  * @author Adriano Siqueira
- * @version 1.1
+ * @version 1.2
  * @since 1.0
  */
 public class ClearScreen {
@@ -18,8 +18,8 @@ public class ClearScreen {
      * @throws InterruptedException If the wait command is blocked by another process.
      */
     public static void clear() throws IOException, InterruptedException {
-        final String os = System.getProperty("os.name").toLowerCase();
-        final String command = os.contains("windows") ? "cls" : "clear";
+        String os = System.getProperty("os.name").toLowerCase();
+        String command = os.contains("windows") ? "cls" : "clear";
 
         new ProcessBuilder(command).inheritIO().start().waitFor();
     }
