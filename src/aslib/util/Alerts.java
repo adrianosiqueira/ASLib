@@ -8,6 +8,8 @@ import javafx.scene.layout.Region;
  * <p> Contains an abstraction to create and manipulate dialog panes. </p>
  *
  * @author Adriano Siqueira
+ * @version 2.0
+ * @since 1.0
  */
 public class Alerts {
 
@@ -28,10 +30,10 @@ public class Alerts {
                                   final String content,
                                   final ButtonType[] buttons,
                                   final boolean wait) {
-        final Alert alert = new Alert(type != null ? type : Alert.AlertType.NONE);
+        Alert alert = new Alert(type != null ? type : Alert.AlertType.NONE);
         alert.setTitle(title != null ? title : "");
         alert.setHeaderText(header != null ? header : "");
-        alert.setContentText(content);
+        alert.setContentText(content != null ? content : "");
         alert.getDialogPane().setMinSize(Region.USE_PREF_SIZE, Region.USE_PREF_SIZE);
 
         if (buttons != null) {
@@ -39,11 +41,8 @@ public class Alerts {
             alert.getButtonTypes().addAll(buttons);
         }
 
-        if (wait) {
-            alert.showAndWait();
-        } else {
-            alert.show();
-        }
+        if (wait) alert.showAndWait();
+        else alert.show();
 
         return alert.getResult();
     }
