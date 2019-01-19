@@ -1,8 +1,8 @@
 package aslib.fx.control;
 
+import aslib.exceptions.InvalidClassException;
 import javafx.scene.control.TextField;
 import javafx.scene.control.TextFormatter;
-import aslib.exceptions.InvalidClassException;
 
 /**
  * <p> An custom {@link TextField} made to handle numbers only. </p>
@@ -20,11 +20,11 @@ import aslib.exceptions.InvalidClassException;
  *
  * @param <T> Type of data that {@link NumberField} will work with.
  * @author Adriano Siqueira
- * @version 1.0
+ * @version 1.1
  * @since 4.2
  */
 public class NumberField<T> extends TextField {
-    private final Class<T> tClass;
+    private Class<T> tClass;
     private boolean point;
 
     /**
@@ -35,18 +35,7 @@ public class NumberField<T> extends TextField {
     public NumberField(Class<T> tClass) {
         this.tClass = tClass;
         checkGeneric();
-        configure();
-    }
-
-    /**
-     * <p> Creates an instance of {@link NumberField} with the initial value provided. </p>
-     *
-     * @param tClass       Number class that {@link NumberField} will work with. More details {@link NumberField here}.
-     * @param initialValue Initial value to be set at creation time. If null, an empty string will be set.
-     */
-    public NumberField(Class<T> tClass, T initialValue) {
-        this(tClass);
-        if (initialValue != null) setText(initialValue.toString());
+        configureBehavior();
     }
 
     /**
@@ -65,9 +54,9 @@ public class NumberField<T> extends TextField {
     }
 
     /**
-     * <p> Configure the behavior of {@link NumberField}. </p>
+     * <p> Configures the behavior of {@link NumberField}. </p>
      */
-    private void configure() {
+    private void configureBehavior() {
         setTextFormatter(new TextFormatter<>(change -> {
             switch (change.getText()) {
                 case "":
@@ -89,6 +78,6 @@ public class NumberField<T> extends TextField {
         }));
 
         textProperty().addListener((observable, oldValue, newValue) -> point = newValue.contains("."));
-        this.point = false;
+        point = false;
     }
 }
