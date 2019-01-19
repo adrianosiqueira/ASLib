@@ -8,6 +8,8 @@ import java.util.Calendar;
  * <p> Contains the function to calculate the age based in the date of birth. </p>
  *
  * @author Adriano Siqueira
+ * @version 1.2
+ * @since 1.0
  */
 public class AgeDetector {
 

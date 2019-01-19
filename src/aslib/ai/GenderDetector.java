@@ -4,6 +4,8 @@ package aslib.ai;
  * <p> Automatically detects the gender of provided name. </p>
  *
  * @author Adriano Siqueira
+ * @version 4.0
+ * @since 1.0
  */
 public class GenderDetector {
 
