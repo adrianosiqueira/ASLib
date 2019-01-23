@@ -5,7 +5,7 @@ package aslib.exceptions;
  *
  * @author Adriano Siqueira
  * @version 1.0
- * @since 5.2
+ * @since 6.0
  */
 public class InvalidDateException extends RuntimeException {
     public InvalidDateException() {
