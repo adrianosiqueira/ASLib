@@ -16,8 +16,6 @@ public class GenderDetector {
 
     /**
      * <p> Switch that indicates whether the name was analyzed. </p>
-     *
-     * @apiNote Internal use only.
      */
     private boolean analyzed = false;
 
@@ -46,8 +44,6 @@ public class GenderDetector {
      *
      * <p> <b>Obs.:</b> This function only works in "<b>Brazilian Portuguese</b>"
      * names. </p>
-     *
-     * @apiNote Internal use only.
      */
     private void analyze() {
         if (name.length() < 3)
