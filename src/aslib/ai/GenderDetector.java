@@ -5,11 +5,21 @@ package aslib.ai;
  * name.</p>
  *
  * @author Adriano Siqueira
- * @version 5.0
+ * @version 5.1
  * @since 1.0
  */
 public class GenderDetector {
     private String name;
+
+    /**
+     * <p> Creates an instance of {@link GenderDetector} class. </p>
+     *
+     * <p> Because the name was not initialized, the result of the detection
+     * will accuse the name of being invalid if it not call {@code setName}
+     * before. </p>
+     */
+    public GenderDetector() {
+    }
 
     /**
      * <p> Creates an instance of {@link GenderDetector} class. </p>
@@ -28,7 +38,7 @@ public class GenderDetector {
      *
      * @return [-1] - Invalid <br> [ 0] - Undefined <br> [ 1] - Feminine <br> [ 2] - Masculine
      */
-    public int detect() {
+    public int getSex() {
         if (name == null || name.length() < 3)
             return -1;
 
@@ -170,5 +180,13 @@ public class GenderDetector {
             default:    // ???
                 return 0;
         }
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 }
