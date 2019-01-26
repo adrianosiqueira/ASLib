@@ -1,5 +1,7 @@
 package aslib.util;
 
+import aslib.exceptions.InvalidEnumSearchArgumentException;
+
 /**
  * <p> Contains the options to represent the gender of a person. </p>
  *
@@ -27,14 +29,14 @@ public enum GenderType {
      *
      * @param gender Code to return as an option of enum.
      * @return The enum option that matches the code.
-     * @throws IllegalArgumentException If the code not exists.
+     * @throws InvalidEnumSearchArgumentException If the code not exists.
      */
-    public GenderType getGenderType(int gender) throws IllegalArgumentException {
+    public GenderType getGenderType(int gender) throws InvalidEnumSearchArgumentException {
         for (GenderType value : values())
             if (value.gender == gender)
                 return value;
 
-        throw new IllegalArgumentException("The gender provided is invalid!");
+        throw new InvalidEnumSearchArgumentException("The gender provided is invalid!");
     }
 
     /**
