@@ -1,4 +1,3 @@
-```html
 <h1>ASLib</h1>
 <h3>About</h3>
 <p>Package with methods to simplify code development.</p>
@@ -32,4 +31,3 @@
 <ul>
     <li>Opener module automatically adds the "ALL" filter only when its parameter is null. </li>
 </ul>
-```
