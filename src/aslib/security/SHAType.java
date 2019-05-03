@@ -33,7 +33,7 @@ import aslib.exceptions.InvalidEnumSearchArgumentException;
  * </table>
  *
  * @author Adriano Siqueira
- * @version 1.0
+ * @version 2019-05-03
  * @since 6.1
  */
 public enum SHAType {
