@@ -12,7 +12,7 @@ import java.util.List;
  * directory. </p>
  *
  * @author Adriano Siqueira
- * @version 2.0
+ * @version 2019-05-03
  * @since 1.0
  */
 public class Opener {
