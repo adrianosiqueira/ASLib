@@ -8,7 +8,7 @@ import javafx.scene.control.TextFormatter;
  * <p> An custom {@link TextField} made to handle numbers only. </p>
  *
  * @author Adriano Siqueira
- * @version 1.2
+ * @version 2019-05-03
  * @since 4.2
  */
 public class NumberField extends TextField {
