@@ -2,10 +2,10 @@ package aslib.time;
 
 import java.time.LocalDate;
 import java.time.Period;
+import java.time.ZoneId;
 import java.time.temporal.ChronoUnit;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.GregorianCalendar;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -13,7 +13,7 @@ import java.util.Map;
  * <p> Contains the functions to calculate the difference between two dates. </p>
  *
  * @author Adriano Siqueira
- * @version 1.0
+ * @version 2019-05-03
  * @since 6.0
  */
 public class TimeBetween {
@@ -27,17 +27,11 @@ public class TimeBetween {
      * @param endDate   End date for processing.
      */
     public TimeBetween(Date startDate, Date endDate) {
-        if (startDate != null) {
-            Calendar calendar = new GregorianCalendar();
-            calendar.setTime(startDate);
-            this.startDate = LocalDate.ofInstant(calendar.toInstant(), calendar.getTimeZone().toZoneId());
-        }
+        if (startDate != null)
+            this.startDate = startDate.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
 
-        if (endDate != null) {
-            Calendar calendar = new GregorianCalendar();
-            calendar.setTime(endDate);
-            this.endDate = LocalDate.ofInstant(calendar.toInstant(), calendar.getTimeZone().toZoneId());
-        }
+        if (endDate != null)
+            this.endDate = endDate.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
     }
 
     /**
@@ -48,10 +42,10 @@ public class TimeBetween {
      */
     public TimeBetween(Calendar startDate, Calendar endDate) {
         if (startDate != null)
-            this.startDate = LocalDate.ofInstant(startDate.toInstant(), startDate.getTimeZone().toZoneId());
+            this.startDate = startDate.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
 
         if (endDate != null)
-            this.endDate = LocalDate.ofInstant(endDate.toInstant(), endDate.getTimeZone().toZoneId());
+            this.endDate = endDate.toInstant().atZone(ZoneId.systemDefault()).toLocalDate();
     }
 
     /**
@@ -75,8 +69,12 @@ public class TimeBetween {
      * YEAR field. </p>
      *
      * @return A map with the fields as key and the values.
+     * @throws NullPointerException If some of the dates are null.
      */
-    public Map<ChronoUnit, Integer> getCompleteTime() {
+    public Map<ChronoUnit, Integer> getCompleteTime() throws NullPointerException {
+        if (startDate == null || endDate == null)
+            throw new NullPointerException("None of dates can be null.");
+
         Period period = Period.between(startDate, endDate);
 
         Map<ChronoUnit, Integer> time = new HashMap<>();
@@ -91,8 +89,9 @@ public class TimeBetween {
      * <p> Calculates the amount of years between the dates. </p>
      *
      * @return The amount of years between the dates.
+     * @throws NullPointerException If some of the dates are null.
      */
-    public int getTotalYears() {
+    public int getTotalYears() throws NullPointerException {
         if (startDate == null || endDate == null)
             throw new NullPointerException("None of dates can be null.");
 
@@ -103,10 +102,11 @@ public class TimeBetween {
      * <p> Calculates the amount of months between the dates. </p>
      *
      * @return The amount of months between the dates.
+     * @throws NullPointerException If some of the dates are null.
      */
-    public long getTotalMonths() {
-        if (startDate == null)
-            throw new NullPointerException("Date can not be null.");
+    public long getTotalMonths() throws NullPointerException {
+        if (startDate == null || endDate == null)
+            throw new NullPointerException("None of dates can be null.");
 
         return Period.between(startDate, endDate).toTotalMonths();
     }
