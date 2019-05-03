@@ -11,13 +11,20 @@ import java.util.Map;
  */
 public class MorseStringDictionary implements MorseDictionary {
 
+    /**
+     * <p> Decodes morse code into a string format. </p>
+     *
+     * @param input Morse code to be decoded.
+     * @return The complete message in readable string.
+     * @throws NullPointerException If the input is null.
+     */
     @Override
-    public String get(String morse) {
-        if (morse == null)
-            return "";
+    public String get(String input) throws NullPointerException {
+        if (input == null)
+            throw new NullPointerException("Input string can not be null.");
 
         StringBuilder message = new StringBuilder();
-        String[] words = morse.split(" {7}");
+        String[] words = input.split(" {7}");
 
         for (String word : words) {
             String[] letters = word.split(" {3}");
