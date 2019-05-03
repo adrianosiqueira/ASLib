@@ -4,7 +4,7 @@ package aslib.exceptions;
  * <p> Custom exception to symbolize that some date is invalid. </p>
  *
  * @author Adriano Siqueira
- * @version 1.0
+ * @version 2019-05-03
  * @since 6.0
  */
 public class InvalidDateException extends RuntimeException {

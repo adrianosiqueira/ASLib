@@ -4,7 +4,7 @@ package aslib.exceptions;
  * <p> Custom exception to symbolize that some class is invalid to the context. </p>
  *
  * @author Adriano Siqueira
- * @version 1.0
+ * @version 2019-05-03
  * @since 4.2
  */
 public class InvalidClassException extends RuntimeException {
