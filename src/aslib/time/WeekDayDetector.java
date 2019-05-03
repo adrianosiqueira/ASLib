@@ -9,7 +9,7 @@ import java.util.GregorianCalendar;
  * <p> Contains the function to calculate the age based in the date of birth. </p>
  *
  * @author Adriano Siqueira
- * @version 1.5
+ * @version 2019-05-03
  * @since 1.0
  */
 public class WeekDayDetector {
