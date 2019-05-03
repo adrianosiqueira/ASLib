@@ -7,7 +7,7 @@ import java.util.Scanner;
  * <p> Contains the function to get the readkey from console. </p>
  *
  * @author Adriano Siqueira
- * @version 1.1
+ * @version 2019-05-03
  * @since 1.0
  */
 public class ReadKey {
