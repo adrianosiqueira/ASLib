@@ -1,12 +1,14 @@
 package aslib.cli;
 
+import aslib.os.OSType;
+
 import java.io.IOException;
 
 /**
  * <p> Contains the function to clear the screen when running in the console. </p>
  *
  * @author Adriano Siqueira
- * @version 1.2
+ * @version 2019-05-03
  * @since 1.0
  */
 public class ClearScreen {
@@ -18,9 +20,22 @@ public class ClearScreen {
      * @throws InterruptedException If the wait command is blocked by another process.
      */
     public static void clear() throws IOException, InterruptedException {
-        String os = System.getProperty("os.name").toLowerCase();
-        String command = os.contains("windows") ? "cls" : "clear";
+        String command;
 
-        new ProcessBuilder(command).inheritIO().start().waitFor();
+        switch (OSType.detect()) {
+            case LINUX:
+            case MACOS:
+                command = "clear";
+                break;
+            case WINDOWS:
+                command = "cls";
+                break;
+            default:
+                command = null;
+                break;
+        }
+
+        if (command != null)
+            new ProcessBuilder(command).inheritIO().start().waitFor();
     }
 }
