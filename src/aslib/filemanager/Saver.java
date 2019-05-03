@@ -9,7 +9,7 @@ import java.io.File;
  * <p> Contains the function to save a file. </p>
  *
  * @author Adriano Siqueira
- * @version 1.0
+ * @version 2019-05-03
  * @since 6.0
  */
 public class Saver {
