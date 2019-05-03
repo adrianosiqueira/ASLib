@@ -7,7 +7,7 @@ import aslib.util.GenderType;
  * name.</p>
  *
  * @author Adriano Siqueira
- * @version 5.2
+ * @version 2019-05-03
  * @since 1.0
  */
 public class GenderDetector {
@@ -17,7 +17,7 @@ public class GenderDetector {
     /**
      * <p> Switch that indicates whether the name was analyzed. </p>
      */
-    private boolean analyzed = false;
+    private boolean analyzed;
 
     /**
      * <p> Creates an instance of {@link GenderDetector} class. </p>
@@ -40,7 +40,7 @@ public class GenderDetector {
     }
 
     /**
-     * <p> Analyzes the naming pattern of the name to detect its gender. </p>
+     * <p> Analyzes the naming pattern of the name to detect its code. </p>
      *
      * <p> <b>Obs.:</b> This function only works in "<b>Brazilian Portuguese</b>"
      * names. </p>
@@ -52,14 +52,17 @@ public class GenderDetector {
         switch (name.charAt(name.length() - 1)) {
             case 'a':   // Amanda
                 gender = GenderType.FEMININE;
+                break;
 
             case 'c':   // Isac
                 gender = GenderType.MASCULINE;
+                break;
 
             case 'd':   // David
             case 'f':   // Alaf
             case 'k':   // Isak
                 gender = GenderType.MASCULINE;
+                break;
 
             case 'e':
                 if (name.charAt(0) == 'a')
@@ -76,12 +79,15 @@ public class GenderDetector {
                 else if (name.endsWith("que")) gender = GenderType.MASCULINE;                                 // Isaque
                 else if (name.charAt(0) == 'v') gender = GenderType.MASCULINE;                                // Vicente
                 else gender = GenderType.FEMININE;                                                            // Rute
+                break;
 
             case 'é':   // José
                 gender = GenderType.MASCULINE;
+                break;
 
             case 'h':   // Sarah
                 gender = GenderType.FEMININE;
+                break;
 
             case 'i':
             case 'y':
@@ -98,6 +104,7 @@ public class GenderDetector {
                     else gender = GenderType.FEMININE;                                                // Wendy
                 else if (name.charAt(0) == 'y') gender = GenderType.MASCULINE;                        // Yuri
                 else gender = GenderType.FEMININE;                                                    // ???
+                break;
 
             case 'l':
             case 'u':
@@ -126,6 +133,7 @@ public class GenderDetector {
                     else if (name.charAt(1) == 'i') gender = GenderType.MASCULINE;        // Riquelme
                     else gender = GenderType.FEMININE;                                    // Raquel
                 else gender = GenderType.FEMININE;                                        // ???
+                break;
 
             case 'm':
             case 'n':
@@ -146,6 +154,7 @@ public class GenderDetector {
                     else gender = GenderType.FEMININE;                            // Shaissen
                 else if (name.charAt(0) == 'w') gender = GenderType.MASCULINE;    // Wellington
                 else gender = GenderType.FEMININE;                                // ???
+                break;
 
             case 'o':
             case 'ó':
@@ -153,9 +162,11 @@ public class GenderDetector {
                 else if (name.startsWith("ree")) gender = GenderType.FEMININE;    // Reencarnação
                 else if (name.startsWith("res")) gender = GenderType.FEMININE;    // Ressurreição
                 else gender = GenderType.MASCULINE;                               // João
+                break;
 
             case 'p':   // Philip
                 gender = GenderType.MASCULINE;
+                break;
 
             case 'r':
                 if (name.charAt(0) == 'e')
@@ -165,6 +176,7 @@ public class GenderDetector {
                     if (name.charAt(2) == 'i') gender = GenderType.MASCULINE;     // Heitor
                     else gender = GenderType.FEMININE;                            // Heleonor - Hester
                 else gender = GenderType.MASCULINE;                               // Sartor
+                break;
 
             case 's':
             case 'z':
@@ -177,15 +189,19 @@ public class GenderDetector {
                     if (name.charAt(1) == 'a') gender = GenderType.FEMININE;      // Lais
                     else gender = GenderType.MASCULINE;                           // Lucas - Luis
                 else gender = GenderType.FEMININE;                                // ???
+                break;
 
             case 't':   // Vicent
                 gender = GenderType.MASCULINE;
+                break;
 
             case 'x':   // Rex
                 gender = GenderType.MASCULINE;
+                break;
 
             default:    // ???
                 gender = GenderType.UNDEFINED;
+                break;
         }
 
         analyzed = true;
