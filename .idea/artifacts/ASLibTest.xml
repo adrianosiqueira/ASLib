@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="ASLibTest">
+    <output-path>$PROJECT_DIR$/out/artifacts/ASLibTest</output-path>
+    <root id="archive" name="ASLibTest.jar">
+      <element id="module-output" name="ASLib" />
+      <element id="directory" name="source">
+        <element id="module-source" name="ASLib" />
+      </element>
+      <element id="directory" name="javadoc">
+        <element id="dir-copy" path="$PROJECT_DIR$/javadoc" />
+      </element>
+    </root>
+  </artifact>
+</component>
