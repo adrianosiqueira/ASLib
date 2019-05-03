@@ -8,7 +8,7 @@ import javafx.scene.layout.Region;
  * <p> Abstracts the creation of objects of type Alert. </p>
  *
  * @author Adriano Siqueira
- * @version 3.0
+ * @version 2019-05-03
  * @since 2.0
  */
 public class Alerts {
