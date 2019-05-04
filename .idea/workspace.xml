@@ -7,145 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ead9a518-30e3-4497-a755-ddd344f52228" name="Default Changelist" comment="Some minor updates.">
+      <change afterPath="$PROJECT_DIR$/ASLib.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/ASLib.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/ASLib.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/allclasses-frame.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/allclasses-noframe.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/aslib/about/About.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/aslib/about/class-use/About.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/aslib/about/package-frame.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/aslib/about/package-summary.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/aslib/about/package-tree.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/aslib/about/package-use.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/aslib/ai/GenderDetector.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/aslib/ai/class-use/GenderDetector.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/aslib/ai/package-frame.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/aslib/ai/package-summary.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/aslib/ai/package-tree.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/aslib/ai/package-use.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/aslib/cli/ClearScreen.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/aslib/cli/ReadKey.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/aslib/cli/class-use/ClearScreen.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/aslib/cli/class-use/ReadKey.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/aslib/cli/package-frame.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/aslib/cli/package-summary.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/aslib/cli/package-tree.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/aslib/cli/package-use.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/aslib/exceptions/InvalidClassException.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/aslib/exceptions/InvalidDateException.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/aslib/exceptions/class-use/InvalidClassException.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/aslib/exceptions/class-use/InvalidDateException.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/aslib/exceptions/package-frame.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/aslib/exceptions/package-summary.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/aslib/exceptions/package-tree.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/aslib/exceptions/package-use.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/aslib/filemanager/FileExtension.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/aslib/filemanager/Opener.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/aslib/filemanager/Saver.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/aslib/filemanager/class-use/FileExtension.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/aslib/filemanager/class-use/Opener.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/aslib/filemanager/class-use/Saver.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/aslib/filemanager/package-frame.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/aslib/filemanager/package-summary.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/aslib/filemanager/package-tree.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/aslib/filemanager/package-use.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/aslib/fx/control/NumberField.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/aslib/fx/control/class-use/NumberField.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/aslib/fx/control/package-frame.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/aslib/fx/control/package-summary.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/aslib/fx/control/package-tree.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/aslib/fx/control/package-use.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/aslib/fx/util/Alerts.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/aslib/fx/util/class-use/Alerts.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/aslib/fx/util/package-frame.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/aslib/fx/util/package-summary.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/aslib/fx/util/package-tree.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/aslib/fx/util/package-use.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/aslib/time/TimeBetween.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/aslib/time/WeekDayDetector.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/aslib/time/class-use/TimeBetween.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/aslib/time/class-use/WeekDayDetector.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/aslib/time/package-frame.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/aslib/time/package-summary.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/aslib/time/package-tree.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/aslib/time/package-use.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/aslib/util/GenderType.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/aslib/util/MorseStringDictionary.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/aslib/util/StringMorseDictionary.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/aslib/util/class-use/GenderType.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/aslib/util/class-use/MorseStringDictionary.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/aslib/util/class-use/StringMorseDictionary.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/aslib/util/package-frame.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/aslib/util/package-summary.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/aslib/util/package-tree.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/aslib/util/package-use.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/constant-values.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/deprecated-list.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/element-list" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/help-doc.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-1.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-10.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-11.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-12.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-13.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-14.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-15.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-16.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-17.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-18.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-19.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-2.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-20.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-3.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-4.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-5.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-6.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-7.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-8.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/index-files/index-9.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/jquery/external/jquery/jquery.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/jquery/images/ui-bg_flat_0_aaaaaa_40x100.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/jquery/images/ui-bg_flat_75_ffffff_40x100.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/jquery/images/ui-bg_glass_55_fbf9ee_1x400.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/jquery/images/ui-bg_glass_65_ffffff_1x400.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/jquery/images/ui-bg_glass_75_dadada_1x400.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/jquery/images/ui-bg_glass_75_e6e6e6_1x400.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/jquery/images/ui-bg_glass_95_fef1ec_1x400.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/jquery/images/ui-bg_highlight-soft_75_cccccc_1x100.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/jquery/images/ui-icons_222222_256x240.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/jquery/images/ui-icons_2e83ff_256x240.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/jquery/images/ui-icons_454545_256x240.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/jquery/images/ui-icons_888888_256x240.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/jquery/images/ui-icons_cd0a0a_256x240.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/jquery/jquery-1.10.2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/jquery/jquery-ui.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/jquery/jquery-ui.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/jquery/jquery-ui.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/jquery/jquery-ui.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/jquery/jquery-ui.structure.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/jquery/jquery-ui.structure.min.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/jquery/jszip-utils/dist/jszip-utils-ie.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/jquery/jszip-utils/dist/jszip-utils-ie.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/jquery/jszip-utils/dist/jszip-utils.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/jquery/jszip-utils/dist/jszip-utils.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/jquery/jszip/dist/jszip.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/jquery/jszip/dist/jszip.min.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/member-search-index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/member-search-index.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/overview-frame.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/overview-summary.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/overview-tree.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/package-search-index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/package-search-index.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/resources/glass.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/resources/x.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/script.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/search.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/serialized-form.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/stylesheet.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/type-search-index.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/javadoc/type-search-index.zip" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -160,15 +25,8 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="FIRST">
-              <first_editor relative-caret-position="330">
-                <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/ASLib.iml">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -259,6 +117,7 @@
         <option value="$PROJECT_DIR$/src/aslib/test/MorseTest.java" />
         <option value="$PROJECT_DIR$/src/aslib/util/MorseDictionary.java" />
         <option value="$PROJECT_DIR$/README.md" />
+        <option value="$PROJECT_DIR$/src/aslib/filemanager/Reader.java" />
       </list>
     </option>
   </component>
@@ -275,6 +134,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -282,22 +142,10 @@
               <item name="ASLib" type="b2602c69:ProjectViewProjectNode" />
               <item name="ASLib" type="462c0819:PsiDirectoryNode" />
             </path>
-            <path>
-              <item name="ASLib" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ASLib" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="ASLib" type="b2602c69:ProjectViewProjectNode" />
-              <item name="ASLib" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="aslib" type="462c0819:PsiDirectoryNode" />
-            </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -381,7 +229,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3294702" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.4996277" weight="0.32781458" />
+      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.4996277" visible="true" weight="0.32781458" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50111693" side_tool="true" weight="0.3294702" />
       <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.4988831" weight="0.3294702" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -454,10 +302,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Fix javadoc issue." />
-    <MESSAGE value="Update javadoc." />
-    <MESSAGE value="New custom exception." />
-    <MESSAGE value="Now it throws a more consistent exception." />
     <MESSAGE value="Update readme." />
     <MESSAGE value="Update data." />
     <MESSAGE value="New version of library." />
@@ -479,7 +323,11 @@
     <MESSAGE value="Ported from java 10 to 8." />
     <MESSAGE value="Only one function to handle conversion." />
     <MESSAGE value="New class to generify translator classes." />
-    <option name="LAST_COMMIT_MESSAGE" value="New class to generify translator classes." />
+    <MESSAGE value="Update javadoc." />
+    <MESSAGE value="Added IDE configuration files to the version control." />
+    <MESSAGE value="New class to handle file readings." />
+    <MESSAGE value="Added javadoc to version control." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added javadoc to version control." />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
@@ -523,20 +371,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/aslib/time/AgeDetector.java" />
     <entry file="file://$PROJECT_DIR$/src/aslib/util/MorseCodifier.java" />
-    <entry file="file://$PROJECT_DIR$/ASLib.iml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/javadoc/aslib/util/class-use/GenderType.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/aslib/exceptions/Apagar.java" />
-    <entry file="file://$PROJECT_DIR$/.idea/compiler.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="34" selection-start-line="3" selection-start-column="34" selection-end-line="3" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/compiler.xml" />
     <entry file="file://$PROJECT_DIR$/.idea/encodings.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -783,16 +622,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/aslib/test/MorseTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="15" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/aslib/test/MorseTest.java" />
     <entry file="file://$PROJECT_DIR$/src/aslib/about/About.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -841,11 +671,34 @@
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
           <first_editor relative-caret-position="330">
-            <caret line="22" column="5" lean-forward="true" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
+            <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
           </first_editor>
           <second_editor />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/aslib/filemanager/Reader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="21" lean-forward="true" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#659#660#0" expanded="true" />
+            <element signature="e#691#692#0" expanded="true" />
+            <element signature="e#872#873#0" expanded="true" />
+            <element signature="e#913#914#0" expanded="true" />
+            <element signature="e#1872#1873#0" expanded="true" />
+            <element signature="e#1899#1900#0" expanded="true" />
+            <element signature="e#2097#2098#0" expanded="true" />
+            <element signature="e#2129#2130#0" expanded="true" />
+            <element signature="e#2217#2218#0" expanded="true" />
+            <element signature="e#2249#2250#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ASLib.iml">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
   <component name="masterDetails">
