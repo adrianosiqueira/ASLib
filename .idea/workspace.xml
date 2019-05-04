@@ -7,10 +7,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ead9a518-30e3-4497-a755-ddd344f52228" name="Default Changelist" comment="Some minor updates.">
-      <change afterPath="$PROJECT_DIR$/ASLib.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/ASLib.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/artifacts/ASLibTest.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/ASLib.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/ASLib.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/ASLib.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/ASLib-6.0.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/aslib/filemanager/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aslib/filemanager/Reader.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -25,8 +27,17 @@
   <component name="FileEditorManager">
     <leaf>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/ASLib.iml">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/src/aslib/filemanager/Reader.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="66" column="12" selection-start-line="66" selection-start-column="12" selection-end-line="66" selection-end-column="12" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#2129#2130#0" expanded="true" />
+                <element signature="e#2161#2162#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
     </leaf>
@@ -122,9 +133,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="-1" />
-    <option name="width" value="1366" />
-    <option name="height" value="741" />
+    <option name="width" value="1356" />
+    <option name="height" value="728" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
@@ -141,6 +151,29 @@
             <path>
               <item name="ASLib" type="b2602c69:ProjectViewProjectNode" />
               <item name="ASLib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ASLib" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ASLib" type="462c0819:PsiDirectoryNode" />
+              <item name="build" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ASLib" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ASLib" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ASLib" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ASLib" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="aslib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="ASLib" type="b2602c69:ProjectViewProjectNode" />
+              <item name="ASLib" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="aslib" type="462c0819:PsiDirectoryNode" />
+              <item name="filemanager" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -216,6 +249,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="-1" width="1366" height="728" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25837678" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -229,7 +263,7 @@
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" weight="0.3294702" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.4996277" visible="true" weight="0.32781458" />
+      <window_info anchor="bottom" id="Version Control" order="8" sideWeight="0.4996277" weight="0.32781458" />
       <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.50111693" side_tool="true" weight="0.3294702" />
       <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.4988831" weight="0.3294702" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
@@ -324,10 +358,10 @@
     <MESSAGE value="Only one function to handle conversion." />
     <MESSAGE value="New class to generify translator classes." />
     <MESSAGE value="Update javadoc." />
-    <MESSAGE value="Added IDE configuration files to the version control." />
     <MESSAGE value="New class to handle file readings." />
     <MESSAGE value="Added javadoc to version control." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added javadoc to version control." />
+    <MESSAGE value="Added IDE configuration files to the version control." />
+    <option name="LAST_COMMIT_MESSAGE" value="Added IDE configuration files to the version control." />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
@@ -667,10 +701,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/ASLib.iml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="FIRST">
-          <first_editor relative-caret-position="330">
+          <first_editor relative-caret-position="322">
             <caret line="22" column="5" selection-start-line="22" selection-start-column="5" selection-end-line="22" selection-end-column="5" />
           </first_editor>
           <second_editor />
@@ -679,26 +716,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/aslib/filemanager/Reader.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="21" lean-forward="true" selection-start-line="17" selection-start-column="21" selection-end-line="17" selection-end-column="21" />
+        <state relative-caret-position="210">
+          <caret line="66" column="12" selection-start-line="66" selection-start-column="12" selection-end-line="66" selection-end-column="12" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#659#660#0" expanded="true" />
-            <element signature="e#691#692#0" expanded="true" />
-            <element signature="e#872#873#0" expanded="true" />
-            <element signature="e#913#914#0" expanded="true" />
-            <element signature="e#1872#1873#0" expanded="true" />
-            <element signature="e#1899#1900#0" expanded="true" />
-            <element signature="e#2097#2098#0" expanded="true" />
             <element signature="e#2129#2130#0" expanded="true" />
-            <element signature="e#2217#2218#0" expanded="true" />
-            <element signature="e#2249#2250#0" expanded="true" />
+            <element signature="e#2161#2162#0" expanded="true" />
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ASLib.iml">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
   <component name="masterDetails">
@@ -717,7 +743,7 @@
       <state key="ArtifactsStructureConfigurable.UI">
         <settings>
           <artifact-editor />
-          <last-edited>ASLibTest</last-edited>
+          <last-edited>ASLib-6.1-beta</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>

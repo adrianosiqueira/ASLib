@@ -1,7 +1,7 @@
 <component name="ArtifactManager">
-  <artifact type="jar" name="ASLib">
+  <artifact type="jar" name="ASLib_6.1">
     <output-path>$PROJECT_DIR$/build</output-path>
-    <root id="archive" name="ASLib.jar">
+    <root id="archive" name="ASLib_6.1.jar">
       <element id="module-output" name="ASLib" />
       <element id="directory" name="source">
         <element id="module-source" name="ASLib" />

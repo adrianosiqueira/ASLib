@@ -1,7 +1,7 @@
 <component name="ArtifactManager">
-  <artifact type="jar" build-on-make="true" name="ASLibTest">
-    <output-path>$PROJECT_DIR$/out/artifacts/ASLibTest</output-path>
-    <root id="archive" name="ASLibTest.jar">
+  <artifact type="jar" build-on-make="true" name="ASLib-6.1-beta">
+    <output-path>$PROJECT_DIR$/out/artifacts/ASLib_6_1_beta</output-path>
+    <root id="archive" name="ASLib-6.1-beta.jar">
       <element id="module-output" name="ASLib" />
       <element id="directory" name="source">
         <element id="module-source" name="ASLib" />
