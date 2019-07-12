@@ -5,12 +5,13 @@ import aslib.util.DataConverter;
 
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
+import java.util.Objects;
 
 /**
  * <p> Contains the function to calculate the hash of some string. </p>
  *
  * @author Adriano Siqueira
- * @version 2019-05-03
+ * @version 2019-07-12
  * @since 6.1
  */
 public class StringHashCalculator implements HashCalculator, Runnable {
@@ -47,10 +48,8 @@ public class StringHashCalculator implements HashCalculator, Runnable {
      */
     @Override
     public void run() throws NullPointerException {
-        if (input == null)
-            throw new NullPointerException("Input string can not be null.");
-        else if (algorithm == null)
-            throw new NullPointerException("Algorithm can not be null.");
+        Objects.requireNonNull(input, "Input string can not be null.");
+        Objects.requireNonNull(algorithm, "Algorithm can not be null.");
 
         try {
             MessageDigest digest = MessageDigest.getInstance(algorithm.name);
@@ -79,9 +78,10 @@ public class StringHashCalculator implements HashCalculator, Runnable {
 
     @Override
     public String getHash() throws ExecutionNotDoneException {
-        if (hash != null)
-            return hash;
-        else
+        if (hash == null) {
             throw new ExecutionNotDoneException("Hash code is not calculated yet.");
+        }
+
+        return hash;
     }
 }
