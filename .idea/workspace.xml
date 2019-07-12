@@ -2,12 +2,12 @@
 <project version="4">
   <component name="ArtifactsWorkspaceSettings">
     <artifacts-to-build>
-      <artifact name="ASLib" />
+      <artifact name="ASLib_7.0" />
     </artifacts-to-build>
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ead9a518-30e3-4497-a755-ddd344f52228" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/build/ASLib_7.0.jar" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -127,7 +127,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Improvements in usability." />
     <MESSAGE value="Create class to handle connection statuses." />
     <MESSAGE value="Create class to handle and detect os version." />
     <MESSAGE value="New class to calculate hash sum from a file." />
@@ -148,11 +147,12 @@
     <MESSAGE value="Now it auto checks connection status." />
     <MESSAGE value="Update javadoc." />
     <MESSAGE value="New name." />
-    <MESSAGE value="Some minor updates." />
     <MESSAGE value="New version metadata." />
     <MESSAGE value="Removed." />
     <MESSAGE value="Update readme." />
-    <option name="LAST_COMMIT_MESSAGE" value="Update readme." />
+    <MESSAGE value="New library version." />
+    <MESSAGE value="Some minor updates." />
+    <option name="LAST_COMMIT_MESSAGE" value="Some minor updates." />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
