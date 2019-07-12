@@ -10,7 +10,7 @@ import java.net.URLConnection;
  * <p> Contains the options to represent the statuses of a connection. </p>
  *
  * <h2> Codes </h2>
- * <table>
+ * <table summary="">
  *     <tr>
  *         <th> Status </th>
  *         <th> Code </th>
