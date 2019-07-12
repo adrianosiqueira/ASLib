@@ -5,6 +5,25 @@
 <h3>How to Use</h3>
 <p>Inside the <b>build</b> folder there is a package called <b>Library.jar</b>. To implement these functions, you need to add this package in the list of libraries in your IDE.</p>
 
+<h3>Change log v7.0</h3>
+<ul>
+    <li>ConnectionStatus class now automatically checks the connection.</li>
+    <li>Entire Library ported from Java 10 to 8.</li>
+    <li>Enums now supports the search by some attribute.</li>
+    <li>GenderDetector class now works with GenderType enum.</li>
+    <li>Morse classes now implements MorseDictionary interface.</li>
+    <li>New class to convert byte to string.</li>
+    <li>New class to get data from command line.</li>
+    <li>New class to validate CPF.</li>
+    <li>New classes to calculate hash codes.</li>
+    <li>New custom exceptions.</li>
+    <li>New enums.</li>
+    <li>New version patter to the classes.</li>
+    <li>NumberField class now works with NumericType enum.</li>
+    <li>Some minors improvements.</li>
+    <li>New function to read files content in Reader class.</li>
+</ul>
+
 <h3>Change log v6.0</h3>
 <ul>
     <li>Added aslib.filemanager.Saver class to handle save process.</li>
