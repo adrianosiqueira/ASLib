@@ -10,7 +10,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/ASLib.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/ASLib-6.0.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/aslib/filemanager/Reader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/aslib/filemanager/Reader.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -130,7 +129,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Data update." />
     <MESSAGE value="Fix bug in analyze function." />
     <MESSAGE value="Implemented the use of class OSType." />
     <MESSAGE value="New class to handle console input." />
@@ -142,20 +140,21 @@
     <MESSAGE value="New class to calculate hash sum from a string." />
     <MESSAGE value="New class to identify hash calculators classes." />
     <MESSAGE value="New class to handle hash types." />
-    <MESSAGE value="Some minor updates." />
     <MESSAGE value="New class to validate CPFs" />
     <MESSAGE value="New class to handle conversions between data types." />
     <MESSAGE value="Ported from java 10 to 8." />
     <MESSAGE value="Only one function to handle conversion." />
     <MESSAGE value="New class to generify translator classes." />
-    <MESSAGE value="Update javadoc." />
     <MESSAGE value="Added javadoc to version control." />
     <MESSAGE value="Added IDE configuration files to the version control." />
     <MESSAGE value="New class to handle file readings." />
     <MESSAGE value="Update IDE configuration files." />
-    <MESSAGE value="Now it auto checks connection status." />
     <MESSAGE value="Code cleanup." />
-    <option name="LAST_COMMIT_MESSAGE" value="Code cleanup." />
+    <MESSAGE value="New options to read a file content." />
+    <MESSAGE value="Some minor updates." />
+    <MESSAGE value="Now it auto checks connection status." />
+    <MESSAGE value="Update javadoc." />
+    <option name="LAST_COMMIT_MESSAGE" value="Update javadoc." />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
