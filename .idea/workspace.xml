@@ -7,9 +7,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ead9a518-30e3-4497-a755-ddd344f52228" name="Default Changelist" comment="Code cleanup.">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/ASLib.jar" beforeDir="false" afterPath="$PROJECT_DIR$/build/ASLib-6.0.jar" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -129,7 +127,6 @@
   <component name="VcsManagerConfiguration">
     <option name="CHECK_CODE_SMELLS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_NEW_TODO" value="false" />
-    <MESSAGE value="Fix bug in analyze function." />
     <MESSAGE value="Implemented the use of class OSType." />
     <MESSAGE value="New class to handle console input." />
     <MESSAGE value="New extensions and function to get the object." />
@@ -151,10 +148,11 @@
     <MESSAGE value="Update IDE configuration files." />
     <MESSAGE value="Code cleanup." />
     <MESSAGE value="New options to read a file content." />
-    <MESSAGE value="Some minor updates." />
     <MESSAGE value="Now it auto checks connection status." />
     <MESSAGE value="Update javadoc." />
-    <option name="LAST_COMMIT_MESSAGE" value="Update javadoc." />
+    <MESSAGE value="New name." />
+    <MESSAGE value="Some minor updates." />
+    <option name="LAST_COMMIT_MESSAGE" value="Some minor updates." />
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
