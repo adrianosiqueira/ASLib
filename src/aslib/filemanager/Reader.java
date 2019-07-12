@@ -7,12 +7,15 @@ import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.Path;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Objects;
 
 /**
  * <p> Contains the function to read a file content. </p>
  *
  * @author Adriano Siqueira
- * @version 2019-05-04
+ * @version 2019-07-12
  * @since 6.1
  */
 public class Reader {
@@ -46,28 +49,51 @@ public class Reader {
     }
 
     /**
-     * <p> Reads the file and extracts its content. </p>
+     * <p> Reads the file and extracts its content in a single string. </p>
      *
      * @return The content of the file in string format.
+     *
      * @throws NullPointerException  If file is null.
      * @throws FileNotFoundException If file does not exists.
-     * @throws IOException           If a problem occurs when reading the file.
      */
-    public String read() throws NullPointerException, FileNotFoundException, IOException {
-        if (file == null)
-            throw new NullPointerException("File can not be null");
-        else if (!file.exists())
-            throw new FileNotFoundException("File does not exists.");
-
+    public String readAll() throws NullPointerException, FileNotFoundException {
         StringBuilder builder = new StringBuilder();
-        String line;
 
-        BufferedReader reader = new BufferedReader(new FileReader(file));
-        while ((line = reader.readLine()) != null)
+        for (String line : readLines()) {
             builder.append(line)
                     .append(System.lineSeparator());
+        }
 
         return builder.toString();
+    }
+
+    /**
+     * <p> Reads the file content. Each item in the list is a line of the file. </p>
+     *
+     * @return The content of the file in string format.
+     *
+     * @throws NullPointerException  If file is null.
+     * @throws FileNotFoundException If file does not exists.
+     */
+    public List<String> readLines() throws NullPointerException, FileNotFoundException {
+        Objects.requireNonNull(file, "File can not be null.");
+
+        if (!file.exists()) {
+            throw new FileNotFoundException("File does not exists.");
+        }
+
+        List<String> list = new ArrayList<>();
+        String line;
+
+        try (BufferedReader reader = new BufferedReader(new FileReader(file))) {
+            while ((line = reader.readLine()) != null) {
+                list.add(line);
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return list;
     }
 
     /**
