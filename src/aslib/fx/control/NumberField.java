@@ -4,15 +4,17 @@ import aslib.util.NumericType;
 import javafx.scene.control.TextField;
 import javafx.scene.control.TextFormatter;
 
+import java.util.Objects;
+
 /**
  * <p> An custom {@link TextField} made to handle numbers only. </p>
  *
  * @author Adriano Siqueira
- * @version 2019-05-03
+ * @version 4.0.0
  * @since 4.2
  */
 public class NumberField extends TextField {
-    private Class numericClass;
+    private NumericType type;
     private boolean point = false;
 
     /**
@@ -21,10 +23,8 @@ public class NumberField extends TextField {
      * @param type Number type that {@link NumberField} will work with.
      */
     public NumberField(NumericType type) throws NullPointerException {
-        if (type != null) {
-            numericClass = type.numericClass;
-            configureBehavior();
-        } else throw new NullPointerException("Type can not be null.");
+        this.type = Objects.requireNonNull(type, "Type can not be null.");
+        configureBehavior();
     }
 
     /**
@@ -42,7 +42,7 @@ public class NumberField extends TextField {
                     } else return null;
 
                 case ".":
-                    if (numericClass == Float.class || numericClass == Double.class)
+                    if (type == NumericType.FLOAT || type == NumericType.DOUBLE)
                         return point ? null : change;
                     else return null;
                 default:
