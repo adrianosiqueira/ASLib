@@ -58,8 +58,10 @@ public enum SHAType {
      * to search by an name.</p>
      *
      * @param length The length of the name to search.
+     *
      * @return The name that its length matches the argument.
-     * @throws InvalidEnumSearchArgumentException If the length does not match wth the optionn of the enum.
+     *
+     * @throws InvalidEnumSearchArgumentException If the length does not match wth the option of the enum.
      */
     public static SHAType getByLength(int length) throws InvalidEnumSearchArgumentException {
         for (SHAType value : values())
