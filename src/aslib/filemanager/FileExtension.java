@@ -9,61 +9,61 @@ import javafx.stage.FileChooser;
  * <p> Automatically creates the {@link javafx.stage.FileChooser.ExtensionFilter}
  * from the selected option. </p>
  *
- * <h2> Filters and Extensions </h2>
+ * <h2><b> Filters and Extensions </b></h2>
  * <table style="width:400px" summary="">
- * <tr>
- * <th> Filter </th>
- * <th> Extensions </th>
- * </tr>
- * <tr>
- * <td> All </td>
- * <td> * </td>
- * </tr>
- * <tr>
- * <td> Compressed </td>
- * <td> *.7z, *.ace, *.alz, *.arc, *.arj, *.bzip2, *.egg, *.gz, *.gzip, *.rar, *.tar, *.zip </td>
- * </tr>
- * <tr>
- * <td> Disk Image </td>
- * <td> *.adf, *.bin, *.cue, *.dmg, *.img, *.iso, *.nrg </td>
- * </tr>
- * <tr>
- * <td> Document </td>
- * <td> *.doc, *.docx, *.ppt, *.pptx, *.xls, *.xlsx, *.odt, *.odp, *.ods, *.pdf, *.rtf, *.txt </td>
- * </tr>
- * <tr>
- * <td> Hash </td>
- * <td> *.txt, *.md5, *.sha1, *.sha224, *.sha356, *.sha384, *.sha512 </td>
- * </tr>
- * <tr>
- * <td> Music </td>
- * <td> *.aac, *.aiff, *.mp3, *.ogg, *.wav, *.wma </td>
- * </tr>
- * <tr>
- * <td> Picture </td>
- * <td> *.gif, *.jpg, *.jpeg, *.png, *.tiff </td>
- * </tr>
- * <tr>
- * <td> Runnable </td>
- * <td> *.apk, *.appimage, *.AppImage, *.exe, *.jar, *.run </td>
- * </tr>
- * <tr>
- * <td> Script </td>
- * <td> *.bash, *.bat, *.dat, *.sh, *.vbs </td>
- * </tr>
- * <tr>
- * <td> Source Code </td>
- * <td> *.c, *.cpp, *.java, *.pas </td>
- * </tr>
- * <tr>
- * <td> Video </td>
- * <td> *.flv, *.mkv, *.mp4, *.mpeg, *.wmv </td>
- * </tr>
+ *  <tr>
+ *      <th> Filter </th>
+ *      <th> Extensions </th>
+ *  </tr>
+ *  <tr>
+ *      <td> All </td>
+ *      <td> * </td>
+ *  </tr>
+ *      <tr>
+ *      <td> Compressed </td>
+ *      <td> *.7z, *.ace, *.alz, *.arc, *.arj, *.bzip2, *.egg, *.gz, *.gzip, *.rar, *.tar, *.zip </td>
+ *      </tr>
+ *  <tr>
+ *      <td> Disk Image </td>
+ *      <td> *.adf, *.bin, *.cue, *.dmg, *.img, *.iso, *.nrg </td>
+ *  </tr>
+ *  <tr>
+ *      <td> Document </td>
+ *      <td> *.doc, *.docx, *.ppt, *.pptx, *.xls, *.xlsx, *.odt, *.odp, *.ods, *.pdf, *.rtf, *.txt </td>
+ *  </tr>
+ *  <tr>
+ *      <td> Hash </td>
+ *      <td> *.txt, *.md5, *.sha1, *.sha224, *.sha356, *.sha384, *.sha512 </td>
+ *  </tr>
+ *  <tr>
+ *      <td> Music </td>
+ *      <td> *.aac, *.aiff, *.mp3, *.ogg, *.wav, *.wma </td>
+ *  </tr>
+ *  <tr>
+ *      <td> Picture </td>
+ *      <td> *.gif, *.jpg, *.jpeg, *.png, *.tiff </td>
+ *  </tr>
+ *  <tr>
+ *      <td> Runnable </td>
+ *      <td> *.apk, *.appimage, *.AppImage, *.exe, *.jar, *.run </td>
+ *  </tr>
+ *  <tr>
+ *      <td> Script </td>
+ *      <td> *.bash, *.bat, *.dat, *.sh, *.vbs </td>
+ *  </tr>
+ *  <tr>
+ *      <td> Source Code </td>
+ *      <td> *.c, *.cpp, *.java, *.pas </td>
+ *  </tr>
+ *  <tr>
+ *      <td> Video </td>
+ *      <td> *.avi, *.flv, *.mkv, *.mp4, *.mpeg, *.wmv </td>
+ *  </tr>
  * </table>
  *
  * @author Adriano Siqueira
- * @version 1.0 - 1.1
- * @since 6.0
+ * @version 1.0 - 1.1 - 3.0.0
+ * @since 6.0.0
  */
 public enum FileExtension {
     /**
@@ -84,12 +84,12 @@ public enum FileExtension {
     /**
      * <p> Only document files are shown. </p>
      */
-    DOCUMENT("Documents", "*.doc", "*.docx", "*.ppt", "*.pptx", "*.xls", "*.xlsx", "*.odt", "*.odp", "*.ods", "*.pdf", "*.rtf", "*.txt"),
+    DOCUMENT("Documents", "*.doc", "*.docx", "*.odp", "*.ods", "*.odt", "*.pdf", "*.ppt", "*.pptx", "*.rtf", "*.txt", "*.xls", "*.xlsx"),
 
     /**
      * <p> Only hash files are shown. </p>
      */
-    HASH("Hashes", "*.txt", "*.md5", "*.sha1", "*.sha224", "*.sha356", "*.sha384", "*.sha512"),
+    HASH("Hashes", "*.md5", "*.sha1", "*.sha224", "*.sha356", "*.sha384", "*.sha512", "*.txt"),
 
     /**
      * <p> Only music files are shown. </p>
@@ -99,17 +99,17 @@ public enum FileExtension {
     /**
      * <p> Only picture files are shown. </p>
      */
-    PICTURE("Pictures", "*.gif", "*.jpg", "*.jpeg", "*.png", "*.tiff"),
+    PICTURE("Pictures", "*.gif", "*.jpg", "*.jpeg", "*.png", "*.svg", "*.tiff"),
 
     /**
      * <p> Only runnable files are shown. </p>
      */
-    RUNNABLE("Runnables", "*.apk", "*.appimage", "*.AppImage", "*.exe", "*.jar", "*.run"),
+    RUNNABLE("Runnables", "*.apk", "*.appimage", "*.AppImage", "*.exe", "*.jar", "*.msi", "*.run"),
 
     /**
      * <p> Only script files are shown. </p>
      */
-    SCRIPT("Scripts", "*.bash", "*.bat", "*.dat", "*.sh", "*.vbs"),
+    SCRIPT("Scripts", "*.bash", "*.bat", "*.dat", "*.sh", "*.vbs", "*.zsh"),
 
     /**
      * <p> Only source code files are shown. </p>
@@ -119,7 +119,7 @@ public enum FileExtension {
     /**
      * <p> Only video files are shown. </p>
      */
-    VIDEO("Videos", "*.flv", "*.mkv", "*.mp4", "*.mpeg", "*.ogv", "*.rmvb", "*.wmv");
+    VIDEO("Videos", "*.3gp", "*.avi", "*.flv", "*.mkv", "*.mp4", "*.mpeg", "*.mpg", "*.ogv", "*.rmvb","*.webm", "*.wmv");
 
     public final String description;
     public final String[] extensions;
@@ -136,21 +136,27 @@ public enum FileExtension {
      * occurrence. </p>
      *
      * @param extension Extension to be searched for.
+     *
      * @return The {@link FileExtension} option that contains the extension in its list.
+     *
      * @throws IllegalArgumentException           If the extension does not starts with a dot.
      * @throws InvalidEnumSearchArgumentException If the extension does not exists.
      * @throws NullPointerException               If the extension is null.
      */
     public static FileExtension getByExtension(String extension) throws IllegalArgumentException, InvalidEnumSearchArgumentException, NullPointerException {
-        if (extension == null)
+        if (extension == null) {
             throw new NullPointerException("The extension can not be null");
-        else if (extension.charAt(0) != '.')
+        } else if (extension.charAt(0) != '.') {
             throw new IllegalArgumentException("The extension must start with a dot ('.').");
+        }
 
-        for (FileExtension value : values())
-            for (String valueExtension : value.extensions)
-                if (valueExtension.endsWith(extension))
+        for (FileExtension value : values()) {
+            for (String valueExtension : value.extensions) {
+                if (valueExtension.endsWith(extension)) {
                     return value;
+                }
+            }
+        }
 
         throw new InvalidEnumSearchArgumentException("The extension does not exists.");
     }
