@@ -49,12 +49,6 @@ public abstract class CNPJUtils extends DocumentUtils {
             int[] verification = calculateVerification(digits);
 
             return cnpj.endsWith(getDigits(verification));
-            /*boolean checkDigit = cnpj.endsWith(getDigits(verification));
-
-            digits = getDigits(cnpj);
-            boolean checkSum = checkSum(digits);
-
-            return checkDigit && checkSum;*/
         }
     };
 

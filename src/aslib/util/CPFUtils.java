@@ -46,9 +46,8 @@ public abstract class CPFUtils extends DocumentUtils {
 
             int[] digits = getDigits(cpf);
             int[] verification = calculateVerification(digits);
-            boolean checkDigit = cpf.endsWith(getDigits(verification));
 
-            digits = getDigits(cpf);
+            boolean checkDigit = cpf.endsWith(getDigits(verification));
             boolean checkSum = checkSum(digits);
 
             return checkDigit && checkSum;
