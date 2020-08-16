@@ -9,7 +9,7 @@ import java.util.Random;
  * to format, generate and validate. </p>
  *
  * @author Adriano Siqueira
- * @version 1.0.0
+ * @version 1.1.0
  * @since 9.0.0
  */
 public abstract class DocumentUtils {
@@ -45,9 +45,22 @@ public abstract class DocumentUtils {
      * @since 1.0.0
      */
     protected DocumentUtils(int length, String regexWithSeparator) {
+        this(length, regexWithSeparator, "\\d{" + length + "}");
+    }
+
+    /**
+     * <p> Initializes the attributes of the class. </p>
+     *
+     * @param length                Number of digits of the document without the separators.
+     * @param regexWithSeparator    Pattern of the document when it contains the separators.
+     * @param regexWithoutSeparator Pattern of the document when it does not contains the separators.
+     *
+     * @since 1.1.0
+     */
+    protected DocumentUtils(int length, String regexWithSeparator, String regexWithoutSeparator) {
         this.length = length;
         this.regexWithSeparator = regexWithSeparator;
-        this.regexWithoutSeparator = "\\d{" + length + "}";
+        this.regexWithoutSeparator = regexWithoutSeparator;
     }
 
 
@@ -261,6 +274,6 @@ public abstract class DocumentUtils {
      */
     protected String removeSeparator(String input) throws NullPointerException {
         Objects.requireNonNull(input, "Input string can not be null.");
-        return input.replaceAll("[-./]", "");
+        return input.replaceAll("[-./ ]", "");
     }
 }
