@@ -10,7 +10,7 @@ import java.util.Objects;
  * to work correctly. </p>
  *
  * @author Adriano Siqueira
- * @version 1.0.0
+ * @version 1.0.0 > 1.0.1
  * @since 9.0.0
  */
 public abstract class RGUtils extends DocumentUtils {
@@ -26,6 +26,7 @@ public abstract class RGUtils extends DocumentUtils {
         public boolean isValid(String rg) {
             Objects.requireNonNull(rg, "RG can not be null.");
             rg = removeNonNumericCharacter(rg);
+            rg = fillDocument(rg);
 
             return rg.length() == length && !isSameDigits(rg);
         }
@@ -42,6 +43,7 @@ public abstract class RGUtils extends DocumentUtils {
         public boolean isValid(String rg) {
             Objects.requireNonNull(rg, "RG can not be null.");
             rg = removeSeparator(rg);
+            rg = fillDocument(rg);
 
             if (!rg.matches(regexWithoutSeparator) ||
                     isSameDigits(rg)) {
@@ -87,11 +89,11 @@ public abstract class RGUtils extends DocumentUtils {
 
 
     @Override
-    public String format(String cpf) {
-        Objects.requireNonNull(cpf, "RG can not be null.");
-        cpf = removeNonNumericCharacter(cpf);
+    public String format(String rg) {
+        Objects.requireNonNull(rg, "RG can not be null.");
+        rg = removeNonNumericCharacter(rg);
 
-        StringBuilder result = new StringBuilder(cpf);
+        StringBuilder result = new StringBuilder(rg);
 
         while (result.length() < length) {
             result.insert(0, "0");
