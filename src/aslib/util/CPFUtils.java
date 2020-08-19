@@ -6,7 +6,7 @@ import java.util.Objects;
  * <p> Handles the operations involving CPF, such as formatting, generating and validating. </p>
  *
  * @author Adriano Siqueira
- * @version 1.0.0
+ * @version 1.0.1
  * @since 9.0.0
  */
 public abstract class CPFUtils extends DocumentUtils {

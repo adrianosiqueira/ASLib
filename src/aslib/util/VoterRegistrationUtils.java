@@ -7,7 +7,7 @@ import java.util.Objects;
  * generating and validating. </p>
  *
  * @author Adriano Siqueira
- * @version 1.0.0
+ * @version 1.0.1
  * @since 9.0.0
  */
 public abstract class VoterRegistrationUtils extends DocumentUtils {

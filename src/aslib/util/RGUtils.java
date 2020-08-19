@@ -10,7 +10,7 @@ import java.util.Objects;
  * to work correctly. </p>
  *
  * @author Adriano Siqueira
- * @version 1.0.0 > 1.0.1
+ * @version 1.0.1
  * @since 9.0.0
  */
 public abstract class RGUtils extends DocumentUtils {
