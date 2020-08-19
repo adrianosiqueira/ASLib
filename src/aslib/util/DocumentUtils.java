@@ -9,7 +9,7 @@ import java.util.Random;
  * to format, generate and validate. </p>
  *
  * @author Adriano Siqueira
- * @version 1.1.0
+ * @version 1.2.0
  * @since 9.0.0
  */
 public abstract class DocumentUtils {
@@ -246,6 +246,33 @@ public abstract class DocumentUtils {
         return input.matches(input.charAt(0) + "+");
     }
 
+
+    /**
+     * <p> Fills the input string with leading zeroes if the length is less
+     * than the correct. Otherwise it will not do anything. </p>
+     *
+     * @param input String to be filled.
+     *
+     * @return A string with the correct length.
+     *
+     * @throws NullPointerException If the input string is null.
+     * @since 1.2.0
+     */
+    protected String fillDocument(String input) throws NullPointerException {
+        if (input == null) {
+            throw new NullPointerException("Input string can not be null.");
+        } else if (input.length() == length) {
+            return input;
+        }
+
+        StringBuilder result = new StringBuilder(input);
+
+        while (result.length() < length) {
+            result.insert(0, "0");
+        }
+
+        return result.toString();
+    }
 
     /**
      * <p> Removes all non-numeric characters of the input string. </p>
