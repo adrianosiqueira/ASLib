@@ -24,6 +24,7 @@ public abstract class VoterRegistrationUtils extends DocumentUtils {
         public boolean isValid(String registration) {
             Objects.requireNonNull(registration, "Registration can not be null.");
             registration = removeNonNumericCharacter(registration);
+            registration = fillDocument(registration);
 
             return registration.length() == length && !isSameDigits(registration);
         }
@@ -40,6 +41,7 @@ public abstract class VoterRegistrationUtils extends DocumentUtils {
         public boolean isValid(String registration) {
             Objects.requireNonNull(registration, "Registration can not be null.");
             registration = removeSeparator(registration);
+            registration = fillDocument(registration);
 
             if (!registration.matches(regexWithoutSeparator) ||
                     isSameDigits(registration)) {

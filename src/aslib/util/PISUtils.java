@@ -23,6 +23,7 @@ public abstract class PISUtils extends DocumentUtils {
         public boolean isValid(String pis) {
             Objects.requireNonNull(pis, "PIS can not be null.");
             pis = removeNonNumericCharacter(pis);
+            pis = fillDocument(pis);
 
             return pis.length() == length && !isSameDigits(pis);
         }
@@ -39,6 +40,7 @@ public abstract class PISUtils extends DocumentUtils {
         public boolean isValid(String pis) {
             Objects.requireNonNull(pis, "PIS can not be null.");
             pis = removeSeparator(pis);
+            pis = fillDocument(pis);
 
             if (!pis.matches(regexWithoutSeparator) ||
                     isSameDigits(pis)) {

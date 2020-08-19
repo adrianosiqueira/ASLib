@@ -22,6 +22,7 @@ public abstract class CPFUtils extends DocumentUtils {
         public boolean isValid(String cpf) {
             Objects.requireNonNull(cpf, "CPF can not be null.");
             cpf = removeNonNumericCharacter(cpf);
+            cpf = fillDocument(cpf);
 
             return cpf.length() == length && !isSameDigits(cpf);
         }
@@ -38,6 +39,7 @@ public abstract class CPFUtils extends DocumentUtils {
         public boolean isValid(String cpf) {
             Objects.requireNonNull(cpf, "CPF can not be null.");
             cpf = removeSeparator(cpf);
+            cpf = fillDocument(cpf);
 
             if (!cpf.matches(regexWithoutSeparator) ||
                     isSameDigits(cpf)) {

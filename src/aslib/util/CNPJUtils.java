@@ -23,6 +23,7 @@ public abstract class CNPJUtils extends DocumentUtils {
         public boolean isValid(String cnpj) {
             Objects.requireNonNull(cnpj, "CNPJ can not be null.");
             cnpj = removeNonNumericCharacter(cnpj);
+            cnpj = fillDocument(cnpj);
 
             return cnpj.length() == length && !isSameDigits(cnpj);
         }
@@ -39,6 +40,7 @@ public abstract class CNPJUtils extends DocumentUtils {
         public boolean isValid(String cnpj) {
             Objects.requireNonNull(cnpj, "CNPJ can not be null.");
             cnpj = removeSeparator(cnpj);
+            cnpj = fillDocument(cnpj);
 
             if (!cnpj.matches(regexWithoutSeparator) ||
                     isSameDigits(cnpj)) {
