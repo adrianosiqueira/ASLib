@@ -1,7 +1,8 @@
 package aslib.filemanager;
 
-import aslib.exceptions.InvalidEnumSearchArgumentException;
 import javafx.stage.FileChooser;
+
+import java.util.Optional;
 
 /**
  * <p> Contains the relation between file type and their extensions. </p>
@@ -10,6 +11,7 @@ import javafx.stage.FileChooser;
  * from the selected option. </p>
  *
  * <h2><b> Filters and Extensions </b></h2>
+ *
  * <table style="width:400px" summary="">
  *  <tr>
  *      <th> Filter </th>
@@ -62,10 +64,11 @@ import javafx.stage.FileChooser;
  * </table>
  *
  * @author Adriano Siqueira
- * @version 1.0 - 1.1 - 3.0.0
+ * @version 3.1.0
  * @since 6.0.0
  */
 public enum FileExtension {
+
     /**
      * <p> Show all files without any restriction. </p>
      */
@@ -119,45 +122,74 @@ public enum FileExtension {
     /**
      * <p> Only video files are shown. </p>
      */
-    VIDEO("Videos", "*.3gp", "*.avi", "*.flv", "*.mkv", "*.mp4", "*.mpeg", "*.mpg", "*.ogv", "*.rmvb","*.webm", "*.wmv");
+    VIDEO("Videos", "*.3gp", "*.avi", "*.flv", "*.mkv", "*.mp4", "*.mpeg", "*.mpg", "*.ogv", "*.rmvb", "*.webm", "*.wmv");
 
-    public final String description;
-    public final String[] extensions;
-    public final FileChooser.ExtensionFilter filter;
+    private final String                      description;
+    private final String[]                    extensions;
+    private final FileChooser.ExtensionFilter filter;
 
     FileExtension(String description, String... extensions) {
         this.description = description;
-        this.extensions = extensions;
-        this.filter = new FileChooser.ExtensionFilter(description, extensions);
+        this.extensions  = extensions;
+        this.filter      = new FileChooser.ExtensionFilter(description, extensions);
     }
 
     /**
-     * <p> Searches for the extension at all enum options and returns the first
-     * occurrence. </p>
+     * <p> Searches for the extension in all enum options. </p>
      *
-     * @param extension Extension to be searched for.
+     * <p> This method returns an {@link Optional} containing the first enum
+     * option that contains the extension in its list. If the extension is not
+     * found, is empty or null, then an empty Optional is returned. </p>
      *
-     * @return The {@link FileExtension} option that contains the extension in its list.
+     * @param extension Extension to be searched for. Does not matter if it
+     *                  contains or not the asterisk with a dot.
      *
-     * @throws IllegalArgumentException           If the extension does not starts with a dot.
-     * @throws InvalidEnumSearchArgumentException If the extension does not exists.
-     * @throws NullPointerException               If the extension is null.
+     * @return An {@link Optional} containing the enum option.
      */
-    public static FileExtension getByExtension(String extension) throws IllegalArgumentException, InvalidEnumSearchArgumentException, NullPointerException {
-        if (extension == null) {
-            throw new NullPointerException("The extension can not be null");
-        } else if (extension.charAt(0) != '.') {
-            throw new IllegalArgumentException("The extension must start with a dot ('.').");
+    public static Optional<FileExtension> getByExtension(String extension) {
+        if (extension == null || extension.isEmpty()) {
+            return Optional.empty();
         }
+
+        extension = extension.replaceAll("[*.]", "");
+        extension = "*." + extension;
 
         for (FileExtension value : values()) {
             for (String valueExtension : value.extensions) {
                 if (valueExtension.endsWith(extension)) {
-                    return value;
+                    return Optional.of(value);
                 }
             }
         }
 
-        throw new InvalidEnumSearchArgumentException("The extension does not exists.");
+        return Optional.empty();
+    }
+
+    /**
+     * Gets the enum option group's description.
+     *
+     * @return The description.
+     */
+    public String getDescription() {
+        return description;
+    }
+
+    /**
+     * Gets the enum option group's extensions.
+     *
+     * @return the extensions.
+     */
+    public String[] getExtensions() {
+        return extensions;
+    }
+
+    /**
+     * Gets the {@link javafx.stage.FileChooser.ExtensionFilter} build from the
+     * enum option.
+     *
+     * @return The ExtensionFilter of the enum option.
+     */
+    public FileChooser.ExtensionFilter getFilter() {
+        return filter;
     }
 }
