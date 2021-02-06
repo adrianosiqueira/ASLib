@@ -15,10 +15,11 @@ import java.util.List;
  * exception will be thrown. </p>
  *
  * @author Adriano Siqueira
- * @version 2.0.0
+ * @version 2.0.1
  * @since 1.0.0
  */
 public class FileOpener {
+
     private final Stage stage;
 
     /**
@@ -27,7 +28,8 @@ public class FileOpener {
      * @throws IllegalStateException If it is not in a JavaFX thread.
      * @since 2.0.0
      */
-    public FileOpener() throws IllegalStateException {
+    public FileOpener()
+    throws IllegalStateException {
         if (!Platform.isFxApplicationThread()) {
             throw new IllegalStateException("This class must be called inside a JavaFX thread.");
         }
@@ -37,6 +39,8 @@ public class FileOpener {
 
     /**
      * <p> Show the dialog to open a single file. </p>
+     *
+     * <p> The dialog will open in user home folder. </p>
      *
      * @param title      Title of the dialog.
      * @param extensions Extension filter for the dialog. If it is null, then it will use the platform default.
@@ -52,8 +56,11 @@ public class FileOpener {
     /**
      * <p> Show the dialog to open a single file. </p>
      *
+     * <p> It will try to open the dialog in the provided folder. If it fails,
+     * then the dialog will open in user home folder. </p>
+     *
      * @param title            Title of the dialog.
-     * @param initialDirectory Where to open the dialog initially. If it is null, then it will use the user home folder.
+     * @param initialDirectory Where to open the dialog.
      * @param extensions       Extension filter for the dialog. If it is null, then it will use the platform default.
      *
      * @return The selected file or null if the dialog is closed.
@@ -62,7 +69,7 @@ public class FileOpener {
      */
     public File openFile(String title, File initialDirectory, FileExtension... extensions) {
         FileChooser chooser = getFileChooser(title, initialDirectory, extensions);
-        File file = chooser.showOpenDialog(stage);
+        File        file    = chooser.showOpenDialog(stage);
 
         stage.close();
         return file;
@@ -70,6 +77,8 @@ public class FileOpener {
 
     /**
      * <p> Show the dialog to open a file to save. </p>
+     *
+     * <p> The dialog will open in user home folder. </p>
      *
      * @param title      Title of the dialog.
      * @param extensions Extension filter for the dialog. If it is null, then it will use the platform default.
@@ -85,8 +94,11 @@ public class FileOpener {
     /**
      * <p> Show the dialog to open a file to save. </p>
      *
+     * <p> It will try to open the dialog in the provided folder. If it fails,
+     * then the dialog will open in user home folder. </p>
+     *
      * @param title            Title of the dialog.
-     * @param initialDirectory Where to open the dialog initially. If it is null, then it will use the user home folder.
+     * @param initialDirectory Where to open the dialog initially.
      * @param extensions       Extension filter for the dialog. If it is null, then it will use the platform default.
      *
      * @return The selected files or null if the dialog is closed.
@@ -95,7 +107,7 @@ public class FileOpener {
      */
     public File openFileToSave(String title, File initialDirectory, FileExtension... extensions) {
         FileChooser chooser = getFileChooser(title, initialDirectory, extensions);
-        File file = chooser.showSaveDialog(stage);
+        File        file    = chooser.showSaveDialog(stage);
 
         stage.close();
         return file;
@@ -103,6 +115,8 @@ public class FileOpener {
 
     /**
      * <p> Show the dialog to open multiple files. </p>
+     *
+     * <p> The dialog will open in user home folder. </p>
      *
      * @param title      Title of the dialog.
      * @param extensions Extension filter for the dialog. If it is null, then it will use the platform default.
@@ -118,8 +132,11 @@ public class FileOpener {
     /**
      * <p> Show the dialog to open multiple files. </p>
      *
+     * <p> It will try to open the dialog in the provided folder. If it fails,
+     * then the dialog will open in user home folder. </p>
+     *
      * @param title            Title of the dialog.
-     * @param initialDirectory Where to open the dialog initially. If it is null, then it will use the user home folder.
+     * @param initialDirectory Where to open the dialog initially.
      * @param extensions       Extension filter for the dialog. If it is null, then it will use the platform default.
      *
      * @return The selected files or null if the dialog is closed.
@@ -128,7 +145,7 @@ public class FileOpener {
      */
     public List<File> openFiles(String title, File initialDirectory, FileExtension... extensions) {
         FileChooser chooser = getFileChooser(title, initialDirectory, extensions);
-        List<File> files = chooser.showOpenMultipleDialog(stage);
+        List<File>  files   = chooser.showOpenMultipleDialog(stage);
 
         stage.close();
         return files;
@@ -136,6 +153,8 @@ public class FileOpener {
 
     /**
      * <p> Show the dialog to open a single folder. </p>
+     *
+     * <p> The dialog will open in user home folder. </p>
      *
      * @param title Title of the dialog.
      *
@@ -150,8 +169,11 @@ public class FileOpener {
     /**
      * <p> Show the dialog to open a single folder. </p>
      *
+     * <p> It will try to open the dialog in the provided folder. If it fails,
+     * then the dialog will open in user home folder. </p>
+     *
      * @param title            Title of the dialog.
-     * @param initialDirectory Where to open the dialog initially. If it is null, then it will use the user home folder.
+     * @param initialDirectory Where to open the dialog initially.
      *
      * @return The selected folder or null if the dialog is closed.
      *
@@ -162,8 +184,8 @@ public class FileOpener {
         chooser.setTitle(title);
         chooser.setInitialDirectory(
                 initialDirectory != null
-                        ? initialDirectory
-                        : new File(System.getProperty("user.home"))
+                ? initialDirectory
+                : new File(System.getProperty("user.home"))
         );
         File file = chooser.showDialog(stage);
 
@@ -174,8 +196,11 @@ public class FileOpener {
     /**
      * <p> Creates and configures a {@link FileChooser} instance. </p>
      *
+     * <p> It will try to open the dialog in the provided folder. If it fails,
+     * then the dialog will open in user home folder. </p>
+     *
      * @param title            Title of the dialog.
-     * @param initialDirectory Where to open the dialog initially. If it is null, then it will use the user home folder.
+     * @param initialDirectory Where to open the dialog initially.
      * @param extensions       Extension filter for the dialog. If it is null, then it will use the platform default.
      *
      * @return A FileChoose instance.
@@ -186,14 +211,14 @@ public class FileOpener {
         FileChooser chooser = new FileChooser();
         chooser.setTitle(title);
         chooser.setInitialDirectory(
-                initialDirectory != null
-                        ? initialDirectory
-                        : new File(System.getProperty("user.home"))
+                initialDirectory != null && initialDirectory.isDirectory()
+                ? initialDirectory
+                : new File(System.getProperty("user.home"))
         );
 
         if (extensions != null && extensions.length > 0) {
             for (FileExtension extension : extensions) {
-                chooser.getExtensionFilters().add(extension.filter);
+                chooser.getExtensionFilters().add(extension.getFilter());
             }
         }
 
