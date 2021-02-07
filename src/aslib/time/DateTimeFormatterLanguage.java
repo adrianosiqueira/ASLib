@@ -1,7 +1,5 @@
 package aslib.time;
 
-import aslib.exceptions.InvalidEnumSearchArgumentException;
-
 import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 
@@ -10,7 +8,7 @@ import java.util.Locale;
  * Used together with {@link DateParser} class. </p>
  *
  * @author Adriano Siqueira
- * @version 1.0.0
+ * @version 1.0.1
  * @since 8.0.0
  */
 public enum DateTimeFormatterLanguage {
@@ -53,34 +51,45 @@ public enum DateTimeFormatterLanguage {
             DateTimeFormatter.ofPattern("dd/MMMM/uuuu")
     );
 
-    public final DateTimeFormatter[] formatters;
+    private final DateTimeFormatter[] formatters;
 
     DateTimeFormatterLanguage(DateTimeFormatter... formatters) {
         this.formatters = formatters;
     }
 
     /**
-     * <p> Tries to get an option from the provided locale's language. </p>
+     * <p> Attempts to get the option for the provided locale's language. If the
+     * locale if null, or the language is null or empty, then it returns ENGLISH,
+     * otherwise it will return the appropriate option. </p>
      *
      * @param locale Locale to get the language.
      *
-     * @return An option of the enum.
+     * @return An option that better fits the language.
      *
-     * @throws NullPointerException               If the locale is null.
-     * @throws InvalidEnumSearchArgumentException If the language is not supported.
+     * @since 1.0.0
      */
-    public static DateTimeFormatterLanguage fromLocale(Locale locale) throws NullPointerException, InvalidEnumSearchArgumentException {
-        if (locale == null) {
-            throw new NullPointerException("Locale can not be null.");
+    public static DateTimeFormatterLanguage fromLocale(Locale locale) {
+        if (locale == null ||
+            locale.getLanguage() == null ||
+            locale.getLanguage().isEmpty()) {
+            return ENGLISH;
         }
 
         switch (locale.getLanguage()) {
-            case "en":
-                return ENGLISH;
             case "pt":
                 return PORTUGUESE;
+            case "en":
             default:
-                throw new InvalidEnumSearchArgumentException("There is no enum option for the provided locale: " + locale);
+                return ENGLISH;
         }
+    }
+
+    /**
+     * <p> Gets the formatters for the language. </p>
+     *
+     * @return The formatters of the enum option.
+     */
+    public DateTimeFormatter[] getFormatters() {
+        return formatters;
     }
 }
