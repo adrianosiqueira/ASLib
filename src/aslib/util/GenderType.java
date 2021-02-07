@@ -10,6 +10,7 @@ package aslib.util;
 public enum GenderType {
     FEMININE,
     GAY,
+    INVALID,
     LESBIAN,
     MASCULINE,
     TRANSGENDER,
