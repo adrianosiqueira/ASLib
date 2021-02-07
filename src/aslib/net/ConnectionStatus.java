@@ -1,84 +1,71 @@
 package aslib.net;
 
-import aslib.exceptions.InvalidEnumSearchArgumentException;
-
 import java.io.IOException;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.net.URLConnection;
+import java.util.ArrayList;
+import java.util.List;
 
 /**
- * <p> Contains the options to represent the statuses of a connection. </p>
- *
- * <h2> Codes </h2>
- * <table summary="">
- *     <tr>
- *         <th> Status </th>
- *         <th> Code </th>
- *     </tr>
- *     <tr>
- *         <td> Invalid </td>
- *         <td> -1 </td>
- *     </tr>
- *     <tr>
- *         <td> Online </td>
- *         <td> 0 </td>
- *     </tr>
- *     <tr>
- *         <td> Offline </td>
- *         <td> 1 </td>
- *     </tr>
- * </table>
+ * <p> Contains the options to represent the statuses of an internet connection. </p>
  *
  * @author Adriano Siqueira
- * @version 2019-07-12
+ * @version 3.0.0
  * @since 6.1
  */
 public enum ConnectionStatus {
-    INVALID(-1),
-    ONLINE(0),
-    OFFLINE(1);
-
-    public final int status;
-
-    ConnectionStatus(int status) {
-        this.status = status;
-    }
 
     /**
-     * <p> Searches the option of enum that its status code matches the parameter. </p>
-     *
-     * @param status Status code to searched for.
-     *
-     * @return The option of enum that status matches the argument.
-     *
-     * @throws InvalidEnumSearchArgumentException If the status code does not exists.
+     * Indicates that the machine has no internet connection.
      */
-    public static ConnectionStatus getByStatus(int status) throws InvalidEnumSearchArgumentException {
-        for (ConnectionStatus value : values())
-            if (value.status == status)
-                return value;
+    OFFLINE,
 
-        throw new InvalidEnumSearchArgumentException("The status code does not exists.");
-    }
+    /**
+     * Indicates that the machine has an internet connection.
+     */
+    ONLINE;
 
     /**
      * <p> Automatically checks the internet connection. </p>
      *
+     * <p> This method will attempt to connect with up to five different URLs.
+     * If one is successful, then it returns ONLINE. If all fails, then it
+     * returns OFFLINE. </p>
+     *
+     * <h2><b> URLs in order </b></h2>
+     *
+     * <ol>
+     *     <li> https://goole.com </li>
+     *     <li> https://facebook.com </li>
+     *     <li> https://instagram.com </li>
+     *     <li> https://microsoft.com </li>
+     *     <li> https://ubuntu.com </li>
+     * </ol>
+     *
      * @return The status of the internet connection.
      */
     public static ConnectionStatus checkConnection() {
-        ConnectionStatus status;
+        List<URL> list = new ArrayList<>();
 
         try {
-            URL url = new URL("https://www.google.com");
-            URLConnection connection = url.openConnection();
-            connection.setConnectTimeout(250);
-            connection.connect();
-            status = ConnectionStatus.ONLINE;
-        } catch (IOException e) {
-            status = OFFLINE;
+            list.add(new URL("https://google.com"));
+            list.add(new URL("https://facebook.com"));
+            list.add(new URL("https://instagram.com"));
+            list.add(new URL("https://microsoft.com"));
+            list.add(new URL("https://ubuntu.com"));
+        } catch (MalformedURLException ignored) {
         }
 
-        return status;
+        for (URL url : list) {
+            try {
+                URLConnection connection = url.openConnection();
+                connection.connect();
+                return ONLINE;
+            } catch (IOException ignored) {
+            }
+        }
+
+        return OFFLINE;
     }
 }
