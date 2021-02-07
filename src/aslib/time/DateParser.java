@@ -12,7 +12,7 @@ import java.util.Locale;
  * <p> Contains the methods to parse between {@link LocalDate} and {@link String}. </p>
  *
  * @author Adriano Siqueira
- * @version 1.0.0
+ * @version 1.0.1
  * @since 8.0.0
  */
 public class DateParser implements Parser<LocalDate> {
@@ -52,7 +52,7 @@ public class DateParser implements Parser<LocalDate> {
             throw new NullPointerException("Date string can not be null.");
         }
 
-        for (DateTimeFormatter formatter : formatterLanguage.formatters) {
+        for (DateTimeFormatter formatter : formatterLanguage.getFormatters()) {
             try {
                 return LocalDate.parse(date, formatter);
             } catch (Exception ignored) {
@@ -77,7 +77,7 @@ public class DateParser implements Parser<LocalDate> {
             throw new NullPointerException("Date can not be null.");
         }
 
-        DateTimeFormatter formatter = formatterLanguage.formatters[13];
+        DateTimeFormatter formatter = formatterLanguage.getFormatters()[13];
         return formatter.format(date);
     }
 
