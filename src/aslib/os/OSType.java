@@ -1,10 +1,10 @@
 package aslib.os;
 
 /**
- * <p> Contains the OS options. </p>
+ * <p> Contains the options that represent an Operating System. </p>
  *
  * @author Adriano Siqueira
- * @version 2019-05-03
+ * @version 3.0.0
  * @since 6.1
  */
 public enum OSType {
@@ -13,18 +13,20 @@ public enum OSType {
     WINDOWS;
 
     /**
-     * <p> Detect the OS automatically. </p>
+     * <p> Attempts to detect the operating system automatically. </p>
      *
-     * @return The detected option.
+     * @return The detected OS.
      */
     public static OSType detect() {
-        String os = System.getProperty("os.name").toLowerCase();
+        String os = System.getProperty("os.name")
+                          .toLowerCase();
 
-        if (os.contains("linux"))
+        if (os.contains("linux")) {
             return LINUX;
-        else if (os.contains("windows"))
+        } else if (os.contains("windows")) {
             return WINDOWS;
-        else
+        } else {
             return MACOS;
+        }
     }
 }
