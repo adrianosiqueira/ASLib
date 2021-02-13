@@ -5,18 +5,19 @@ import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.util.List;
+import java.util.Optional;
 
 /**
  * <p> Handles all file read operations. </p>
  *
  * @author Adriano Siqueira
- * @version 2.0.0
+ * @version 3.0.0
  * @since 6.1.0
  */
 public class FileReader {
 
     /**
-     * <p> Creates a {@link FileReader} instance. </p>
+     * <p> Creates an instance of {@link FileReader}. </p>
      *
      * @since 1.0.0
      */
@@ -24,72 +25,94 @@ public class FileReader {
     }
 
     /**
-     * <p> Reads the content of the file. </p>
+     * <p> Reads the entire contents of the file. </p>
      *
-     * @param file Where the content will be read from.
+     * <p> This method returns an Optional containing the contents of the file.
+     * If the file is null or does not exist, an empty Optional is returned. </p>
      *
-     * @return The content of the file in a string format.
+     * @param file File to read.
      *
-     * @since 2.0.0
+     * @return An Optional containing the contents of the file.
+     *
+     * @since 3.0.0
      */
-    public String read(File file) {
-        return read(file.toPath());
+    public Optional<String> read(File file) {
+        return file != null
+               ? read(file.toPath())
+               : Optional.empty();
     }
 
     /**
-     * <p> Reads the content of the file. </p>
+     * <p> Reads the entire contents of the path. </p>
      *
-     * @param path Where the content will be read from.
+     * <p> This method returns an Optional containing the contents of the path.
+     * If the path is null or does not exist, an empty Optional is returned. </p>
      *
-     * @return The content of the file in a string format.
+     * @param path Path to read.
      *
-     * @since 2.0.0
+     * @return An Optional containing the contents of the path.
+     *
+     * @since 3.0.0
      */
-    public String read(Path path) {
-        try {
-            List<String> lines = Files.readAllLines(path);
+    public Optional<String> read(Path path) {
+        Optional<List<String>> optional = this.readLines(path);
+
+        if (optional.isPresent()) {
             StringBuilder builder = new StringBuilder();
 
-            for (String line : lines) {
-                builder.append(line)
-                        .append(System.lineSeparator());
-            }
+            List<String> list = optional.get();
+            list.forEach(line -> builder.append(line)
+                                        .append(System.lineSeparator()));
 
-            return builder.toString();
-        } catch (IOException e) {
-            e.printStackTrace();
-            return null;
+            return Optional.of(builder.toString());
+        } else {
+            return Optional.empty();
         }
     }
 
     /**
-     * <p> Reads the content of the file. </p>
+     * <p> Reads the entire contents of the file. </p>
      *
-     * @param file Where the content will be read from.
+     * <p> This method returns an Optional containing a list of lines of the file.
+     * If the file is null or does not exist, an empty Optional is returned. </p>
      *
-     * @return A list with each item being a line from the file.
+     * @param file File to read.
      *
-     * @since 2.0.0
+     * @return An Optional containing a list of lines of the file.
+     *
+     * @since 3.0.0
      */
-    public List<String> readLines(File file) {
-        return readLines(file.toPath());
+    public Optional<List<String>> readLines(File file) {
+        return file != null
+               ? readLines(file.toPath())
+               : Optional.empty();
     }
 
     /**
-     * <p> Reads the content of the file. </p>
+     * <p> Reads the entire contents of the path. </p>
      *
-     * @param path Where the content will be read from.
+     * <p> This method returns an Optional containing a list of lines of the path.
+     * If the path is null or does not exist, an empty Optional is returned. </p>
      *
-     * @return A list with each item being a line from the file.
+     * @param path Path to read.
      *
-     * @since 2.0.0
+     * @return An Optional containing a list of lines of the path.
+     *
+     * @since 3.0.0
      */
-    public List<String> readLines(Path path) {
+    public Optional<List<String>> readLines(Path path) {
+        if (path == null || Files.notExists(path)) {
+            return Optional.empty();
+        }
+
+        List<String> list = null;
+
         try {
-            return Files.readAllLines(path);
+            list = Files.readAllLines(path);
         } catch (IOException e) {
             e.printStackTrace();
-            return null;
         }
+
+        return Optional.ofNullable(list);
     }
 }
