@@ -1,28 +1,33 @@
 package aslib.cli;
 
-import aslib.os.OSType;
+import aslib.os.OperatingSystemDetector;
 
 import java.io.IOException;
+import java.util.Optional;
 
 /**
- * <p> Contains the function to clear the screen when running in the console. </p>
+ * <p>Utility class for cleaning the console screen.</p>
  *
  * @author Adriano Siqueira
- * @version 2019-05-03
- * @since 1.0
+ * @version 2.0.0
+ * @since 1.0.0
  */
 public class ClearScreen {
 
     /**
-     * <p> Runs the command according to operating system. </p>
+     * <p>Detects the operating system and executes the appropriate command.</p>
      *
-     * @throws IOException          If the ProcessBuilder fail to start the task.
-     * @throws InterruptedException If the wait command is blocked by another process.
+     * <p>If the operating system is not detected, the operation will be cancelled.</p>
+     *
+     * <p>If something goes wrong during the execution of the command, an exception
+     * will be thrown without interfering with the normal execution of the program.</p>
+     *
+     * @since 1.0.0
      */
-    public static void clear() throws IOException, InterruptedException {
+    public static void clear() {
         String command;
 
-        switch (OSType.detect()) {
+        switch (OperatingSystemDetector.detect()) {
             case LINUX:
             case MACOS:
                 command = "clear";
@@ -35,7 +40,13 @@ public class ClearScreen {
                 break;
         }
 
-        if (command != null)
-            new ProcessBuilder(command).inheritIO().start().waitFor();
+        Optional.ofNullable(command)
+                .ifPresent(cmd -> {
+                    try {
+                        new ProcessBuilder(command).inheritIO().start().waitFor();
+                    } catch (InterruptedException | IOException e) {
+                        e.printStackTrace();
+                    }
+                });
     }
 }
