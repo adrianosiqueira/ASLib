@@ -1,16 +1,15 @@
 package aslib.util;
 
 /**
- * <p> Contains the options to represent a person's gender. </p>
+ * <p>Contains several options for representing a person's gender.</p>
  *
  * @author Adriano Siqueira
- * @version 3.0.0
- * @since 6.0
+ * @version 4.0.0
+ * @since 6.0.0
  */
-public enum GenderType {
+public enum Gender {
     FEMININE,
     GAY,
-    INVALID,
     LESBIAN,
     MASCULINE,
     TRANSGENDER,
