@@ -4,6 +4,7 @@ module ASLib {
     exports aslib.ai;
     exports aslib.cli;
     exports aslib.document;
+    exports aslib.document.bra;
     exports aslib.exceptions;
     exports aslib.filemanager;
     exports aslib.fx.control;
@@ -18,6 +19,7 @@ module ASLib {
     opens aslib.ai;
     opens aslib.cli;
     opens aslib.document;
+    opens aslib.document.bra;
     opens aslib.exceptions;
     opens aslib.filemanager;
     opens aslib.fx.control;
