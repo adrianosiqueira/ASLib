@@ -9,8 +9,8 @@ module ASLib {
     exports aslib.filemanager;
     exports aslib.fx.control;
     exports aslib.fx.dialog;
-    exports aslib.net;
-    exports aslib.os;
+    exports aslib.network;
+    exports aslib.operatingsystem;
     exports aslib.parse;
     exports aslib.security;
     exports aslib.time;
@@ -24,8 +24,8 @@ module ASLib {
     opens aslib.filemanager;
     opens aslib.fx.control;
     opens aslib.fx.dialog;
-    opens aslib.net;
-    opens aslib.os;
+    opens aslib.network;
+    opens aslib.operatingsystem;
     opens aslib.parse;
     opens aslib.security;
     opens aslib.time;
