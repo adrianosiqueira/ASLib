@@ -7,8 +7,7 @@ module ASLib {
     exports aslib.document.bra;
     exports aslib.exceptions;
     exports aslib.filemanager;
-    exports aslib.fx.control;
-    exports aslib.fx.dialog;
+    exports aslib.javafx.dialog;
     exports aslib.network;
     exports aslib.operatingsystem;
     exports aslib.parse;
@@ -22,8 +21,7 @@ module ASLib {
     opens aslib.document.bra;
     opens aslib.exceptions;
     opens aslib.filemanager;
-    opens aslib.fx.control;
-    opens aslib.fx.dialog;
+    opens aslib.javafx.dialog;
     opens aslib.network;
     opens aslib.operatingsystem;
     opens aslib.parse;
