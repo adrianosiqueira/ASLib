@@ -1,7 +1,7 @@
 module ASLib {
     requires transitive javafx.controls;
 
-    exports aslib.ai;
+    exports aslib.ai.genderdetector;
     exports aslib.cli;
     exports aslib.document;
     exports aslib.document.bra;
@@ -15,7 +15,7 @@ module ASLib {
     exports aslib.time;
     exports aslib.util;
 
-    opens aslib.ai;
+    opens aslib.ai.genderdetector;
     opens aslib.cli;
     opens aslib.document;
     opens aslib.document.bra;
