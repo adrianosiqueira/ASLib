@@ -1,7 +1,9 @@
-package aslib.util;
+package aslib.ai.genderdetector;
 
 /**
- * <p>Contains several options for representing a person's gender.</p>
+ * <p style="text-align:justify">
+ * Represents the gender of a person.
+ * </p>
  *
  * @author Adriano Siqueira
  * @version 4.0.0
