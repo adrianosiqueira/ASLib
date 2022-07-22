@@ -17,9 +17,11 @@ import javafx.stage.Stage;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.net.URL;
+import java.util.List;
 import java.util.Objects;
 import java.util.Optional;
 import java.util.concurrent.TimeUnit;
+import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
@@ -52,7 +54,7 @@ import java.util.stream.Stream;
  * </p>
  *
  * @author Adriano Siqueira
- * @version 1.0.0
+ * @version 1.1.0
  * @since 12.0.0
  */
 public class MessageDialog {
@@ -77,6 +79,7 @@ public class MessageDialog {
     private double  width;
     private double  height;
 
+    private Runnable[] callbacks;
 
     /**
      * <p>
@@ -237,6 +240,24 @@ public class MessageDialog {
      */
     public MessageDialog buttons(ButtonType... buttons) {
         this.buttons = buttons;
+        return this;
+    }
+
+    /**
+     * <p style="text-align:justify">
+     * Sets the callbacks that will run when the dialog is closed. These
+     * runnables cannot access the dialog result. They will run independently
+     * of how the dialog was closed.
+     * </p>
+     *
+     * @param callbacks Callbacks that will run when the dialog is closed.
+     *
+     * @return Itself to allow chaining calls.
+     *
+     * @since 1.1.0
+     */
+    public MessageDialog callbacks(Runnable... callbacks) {
+        this.callbacks = callbacks;
         return this;
     }
 
@@ -474,6 +495,7 @@ public class MessageDialog {
         configureStylesheet(alert);
         configureSize(alert);
         configureAutoClose(alert);
+        configureCallback(alert);
 
         return alert;
     }
@@ -520,6 +542,25 @@ public class MessageDialog {
         alert.getDialogPane()
              .getButtonTypes()
              .setAll(buttons);
+    }
+
+    /**
+     * <p style="text-align:justify">
+     * Schedules the callbacks to execute when the dialog is closed.
+     * </p>
+     *
+     * @param alert Alert that will have the callbacks scheduled.
+     *
+     * @since 1.1.0
+     */
+    private void configureCallback(Alert alert) {
+        if (callbacks == null) return;
+
+        List<Runnable> runnables = Stream.of(callbacks)
+                                         .filter(Objects::nonNull)
+                                         .collect(Collectors.toList());
+
+        alert.setOnHidden(e -> runnables.forEach(Runnable::run));
     }
 
     /**
