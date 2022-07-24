@@ -8,7 +8,7 @@ module ASLib {
     exports aslib.javafx.dialog;
     exports aslib.network;
     exports aslib.operatingsystem;
-    exports aslib.util;
+    exports aslib.util.morsecodifier;
 
     opens aslib.ai.genderdetector;
     opens aslib.document;
@@ -17,5 +17,5 @@ module ASLib {
     opens aslib.javafx.dialog;
     opens aslib.network;
     opens aslib.operatingsystem;
-    opens aslib.util;
+    opens aslib.util.morsecodifier;
 }
