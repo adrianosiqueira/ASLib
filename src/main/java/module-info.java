@@ -2,20 +2,20 @@ module ASLib {
     requires transitive javafx.controls;
 
     exports aslib.ai.genderdetector;
-    exports aslib.document;
+    exports aslib.convert.morsecodifier;
     exports aslib.document.bra;
-    exports aslib.javafx.filemanager;
+    exports aslib.document;
     exports aslib.javafx.dialog;
+    exports aslib.javafx.filemanager;
     exports aslib.network;
     exports aslib.operatingsystem;
-    exports aslib.util.morsecodifier;
 
     opens aslib.ai.genderdetector;
-    opens aslib.document;
+    opens aslib.convert.morsecodifier;
     opens aslib.document.bra;
-    opens aslib.javafx.filemanager;
+    opens aslib.document;
     opens aslib.javafx.dialog;
+    opens aslib.javafx.filemanager;
     opens aslib.network;
     opens aslib.operatingsystem;
-    opens aslib.util.morsecodifier;
 }
