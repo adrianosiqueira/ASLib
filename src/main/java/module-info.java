@@ -2,6 +2,7 @@ module ASLib {
     requires transitive javafx.controls;
 
     exports aslib.ai.genderdetector;
+    exports aslib.convert.array;
     exports aslib.convert.morsecodifier;
     exports aslib.document.bra;
     exports aslib.document;
@@ -11,6 +12,7 @@ module ASLib {
     exports aslib.operatingsystem;
 
     opens aslib.ai.genderdetector;
+    opens aslib.convert.array;
     opens aslib.convert.morsecodifier;
     opens aslib.document.bra;
     opens aslib.document;
