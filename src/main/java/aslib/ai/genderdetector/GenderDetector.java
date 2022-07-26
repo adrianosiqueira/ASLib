@@ -72,7 +72,9 @@ public class GenderDetector {
                     if (name.charAt(0) == 'b') return Gender.FEMININE;                    // Bete
                     else if (name.charAt(0) == 'r') return Gender.FEMININE;               // Rute
                     else return Gender.MASCULINE;                                         // Dante - Vicente
-                else if (name.charAt(name.length() - 2) == 'u') return Gender.MASCULINE;  // Henrique - Isaque
+                else if (name.charAt(name.length() - 2) == 'u')
+                    if (name.charAt(0) == 'm') return Gender.FEMININE;                    // Monique
+                    else return Gender.MASCULINE;                                         // Henrique - Isaque
                 else if (name.charAt(name.length() - 2) == 'z') return Gender.FEMININE;   // Luíze - Taíze
                 else return Gender.UNDEFINED;                                             // ???
 
@@ -103,6 +105,7 @@ public class GenderDetector {
                     if (name.charAt(name.length() - 3) == 'a') return Gender.MASCULINE;       // Rafael
                     else if (name.charAt(name.length() - 3) == 'b') return Gender.FEMININE;   // Isabel - Mabel
                     else if (name.charAt(name.length() - 3) == 'c') return Gender.MASCULINE;  // Marcel
+                    else if (name.charAt(name.length() - 3) == 'd') return Gender.MASCULINE;  // Tadeu
                     else if (name.charAt(name.length() - 3) == 'h') return Gender.MASCULINE;  // Michel
                     else if (name.charAt(name.length() - 3) == 'i')
                         if (name.charAt(0) == 'c') return Gender.MASCULINE;                   // Castiel
@@ -112,6 +115,7 @@ public class GenderDetector {
                         else return Gender.FEMININE;                                          // Ariel - Muriel
                     else if (name.charAt(name.length() - 3) == 'n') return Gender.MASCULINE;  // Leonel
                     else if (name.charAt(name.length() - 3) == 'o') return Gender.MASCULINE;  // Manoel
+                    else if (name.charAt(name.length() - 3) == 'r') return Gender.MASCULINE;  // Abreu
                     else if (name.charAt(name.length() - 3) == 's') return Gender.MASCULINE;  // Eliesel
                     else if (name.charAt(name.length() - 3) == 'u')
                         if (name.charAt(0) == 'm') return Gender.MASCULINE;                   // Manuel - Maxuel
