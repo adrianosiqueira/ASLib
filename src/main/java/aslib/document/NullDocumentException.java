@@ -1,4 +1,4 @@
-package aslib.document.exception;
+package aslib.document;
 
 /**
  * <p>
