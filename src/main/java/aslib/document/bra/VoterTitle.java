@@ -3,7 +3,7 @@ package aslib.document.bra;
 import aslib.document.Document;
 import aslib.document.DocumentInternalUtil;
 import aslib.document.DocumentUtils;
-import aslib.document.exception.NullDocumentException;
+import aslib.document.NullDocumentException;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,7 +20,7 @@ import java.util.Optional;
  * </p>
  *
  * @author Adriano Siqueira
- * @version 1.0.0
+ * @version 1.0.1
  * @since 12.0.0
  */
 class VoterTitle implements DocumentInternalUtil {
