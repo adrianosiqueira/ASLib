@@ -8,10 +8,10 @@ package aslib.convert.numericbase;
  * </p>
  *
  * @author Adriano Siqueira
- * @version 1.0.0
+ * @version 1.0.1
  * @since 12.0.0
  */
-public class Base16Converter implements BaseConverter {
+class Base16Converter implements BaseConverter {
 
     private final int radix = 16;
 
