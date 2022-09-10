@@ -11,6 +11,7 @@ module ASLib {
     exports aslib.javafx.filemanager;
     exports aslib.network;
     exports aslib.operatingsystem;
+    exports aslib.security.hash;
 
     opens aslib.ai.genderdetector;
     opens aslib.convert.array;
@@ -22,4 +23,5 @@ module ASLib {
     opens aslib.javafx.filemanager;
     opens aslib.network;
     opens aslib.operatingsystem;
+    opens aslib.security.hash;
 }
