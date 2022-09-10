@@ -13,7 +13,7 @@ import java.util.stream.Stream;
  * @version 1.0.0
  * @since 12.0.0
  */
-public interface DocumentInternalUtil extends DocumentCoreUtil {
+public interface DocumentInternal extends Document {
 
     /**
      * <p>
