@@ -1,29 +1,51 @@
 package aslib.document;
 
-import aslib.document.bra.BrazilianDocument;
-
 /**
  * <p>
- * Entry point to the API. Its methods give access to the implementation of a
- * particular country.
+ * Defines the core functionalities of all document implementations.
  * </p>
  *
  * @author Adriano Siqueira
- * @version 1.0.0
+ * @version 2.0.0
  * @since 12.0.0
  */
-public class Document {
+public interface Document {
 
     /**
      * <p>
-     * Access the implementation of Brazilian documents.
+     * Formats the document according to its standards.
      * </p>
      *
-     * @return An instance of {@link BrazilianDocument}.
+     * @param document Document that will be formatted.
+     *
+     * @return The document formatted.
      *
      * @since 1.0.0
      */
-    public static BrazilianDocument brazil() {
-        return new BrazilianDocument();
-    }
+    String format(String document);
+
+    /**
+     * <p>
+     * Generates a new document. The implementation guarantees that the
+     * document will be mathematically valid and the result will be formatted.
+     * </p>
+     *
+     * @return A new mathematically valid and formatted document.
+     *
+     * @since 1.0.0
+     */
+    String generate();
+
+    /**
+     * <p>
+     * Checks if the document is mathematically valid.
+     * </p>
+     *
+     * @param document Document that will be checked.
+     *
+     * @return TRUE if it is valid.
+     *
+     * @since 1.0.0
+     */
+    boolean isValid(String document);
 }
