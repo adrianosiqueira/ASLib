@@ -1,7 +1,6 @@
 package aslib.document.bra;
 
-import aslib.document.Document;
-import aslib.document.DocumentInternalUtil;
+import aslib.document.DocumentInternal;
 import aslib.document.DocumentUtils;
 import aslib.document.NullDocumentException;
 
@@ -15,15 +14,14 @@ import java.util.Optional;
  * </p>
  *
  * <p>
- * Get its instance through the {@link Document#brazil()} method or directly
- * through the {@link BrazilianDocument#pis()} method.
+ * Get its instance through the {@link BrazilianDocument#pis()} method.
  * </p>
  *
  * @author Adriano Siqueira
- * @version 1.0.1
+ * @version 1.0.2
  * @since 12.0.0
  */
-class PIS implements DocumentInternalUtil {
+class PIS implements DocumentInternal {
 
     private final int length                   = 11;
     private final int verificationDigitsLength = 1;
@@ -31,6 +29,13 @@ class PIS implements DocumentInternalUtil {
     private final DocumentUtils utils = new DocumentUtils(length, verificationDigitsLength);
 
 
+    /**
+     * <p style="text-align:justify">
+     * Creates an instance of {@link PIS} class.
+     * </p>
+     *
+     * @since 1.0.0
+     */
     PIS() {}
 
 
