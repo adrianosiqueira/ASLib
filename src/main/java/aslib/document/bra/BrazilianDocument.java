@@ -1,6 +1,6 @@
 package aslib.document.bra;
 
-import aslib.document.DocumentCoreUtil;
+import aslib.document.Document;
 
 /**
  * <p style="text-align:justify">
@@ -8,7 +8,7 @@ import aslib.document.DocumentCoreUtil;
  * </p>
  *
  * @author Adriano Siqueira
- * @version 1.0.0
+ * @version 2.0.0
  * @since 12.0.0
  */
 public final class BrazilianDocument {
@@ -33,7 +33,7 @@ public final class BrazilianDocument {
      *
      * @since 1.0.0
      */
-    public DocumentCoreUtil cnpj() {
+    public static Document cnpj() {
         return new CNPJ();
     }
 
@@ -46,7 +46,7 @@ public final class BrazilianDocument {
      *
      * @since 1.0.0
      */
-    public DocumentCoreUtil cpf() {
+    public static Document cpf() {
         return new CPF();
     }
 
@@ -59,7 +59,7 @@ public final class BrazilianDocument {
      *
      * @since 1.0.0
      */
-    public DocumentCoreUtil pis() {
+    public static Document pis() {
         return new PIS();
     }
 
@@ -72,7 +72,7 @@ public final class BrazilianDocument {
      *
      * @since 1.0.0
      */
-    public DocumentCoreUtil rg() {
+    public static Document rg() {
         return new RG();
     }
 
@@ -85,7 +85,7 @@ public final class BrazilianDocument {
      *
      * @since 1.0.0
      */
-    public DocumentCoreUtil voterTitle() {
+    public static Document voterTitle() {
         return new VoterTitle();
     }
 }
