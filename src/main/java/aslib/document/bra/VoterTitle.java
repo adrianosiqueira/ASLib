@@ -1,7 +1,6 @@
 package aslib.document.bra;
 
-import aslib.document.Document;
-import aslib.document.DocumentInternalUtil;
+import aslib.document.DocumentInternal;
 import aslib.document.DocumentUtils;
 import aslib.document.NullDocumentException;
 
@@ -15,15 +14,14 @@ import java.util.Optional;
  * </p>
  *
  * <p style="text-align:justify">
- * Get its instance through the {@link Document#brazil()} method or directly
- * through the {@link BrazilianDocument#voterTitle()} method.
+ * Get its instance through the {@link BrazilianDocument#voterTitle()} method.
  * </p>
  *
  * @author Adriano Siqueira
- * @version 1.0.1
+ * @version 1.0.2
  * @since 12.0.0
  */
-class VoterTitle implements DocumentInternalUtil {
+class VoterTitle implements DocumentInternal {
 
     private final int length                   = 12;
     private final int verificationDigitsLength = 2;
