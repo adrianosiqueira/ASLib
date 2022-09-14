@@ -1,6 +1,6 @@
 package aslib.document.bra;
 
-import aslib.document.DocumentCoreUtil;
+import aslib.document.Document;
 import aslib.document.NullDocumentException;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -16,12 +16,12 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
  * </p>
  *
  * @author Adriano Siqueira
- * @version 1.0.1
+ * @version 1.0.2
  * @since 12.0.0
  */
 class PISTest {
 
-    private final DocumentCoreUtil document = new BrazilianDocument().pis();
+    private final Document document = BrazilianDocument.pis();
 
 
     @Test
